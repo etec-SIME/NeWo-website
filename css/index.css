@@ -8,39 +8,11 @@ body{
     margin: 0;
     padding: 0;
 }
-
-.menu-nav ul li a {
-    color: #ffffff;
-    text-decoration: none; 
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-}
-
-.menu-nav ul li a:active {
-    color: #A55FE6;
-    text-decoration: none; 
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-}
-
 li{
     list-style: none;
 }
 
 /*HEADER*/
-.menu-nav ul li a.menu-ativo {
-    color: #A55FE6;
-    text-decoration: none; 
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
-    font-weight: 600; 
-    border-bottom: 2px solid #A55FE6;
-    padding-bottom: 5px; 
-}
-
-
 #nav{
     display: flex;
     justify-content: space-between;
@@ -146,7 +118,6 @@ hr{
     border-color: rgb(143, 140, 140);
     border-width: 1px;
 }
-
 /*FOOTER*/
 footer{
     display: flex;

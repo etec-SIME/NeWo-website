@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/preco.css">
 </head>
 <body>
-    <Header>
+    <header>
         <nav id="nav">
             <div class="logo"> 
-                <img src="img/logo.png" width="190px">
+                <a href="index.html" class="menu-ativo"><img src="img/logo.png" width="190px"></a>
             </div>
             <div class="menu-nav">
                 <ul class="menu-list">
@@ -27,7 +27,7 @@
             <div class="c1"></div>
             <div class="c2"></div>
         </nav>
-    </Header>
+    </header>
 
     <main>
         <div class="introduction">
@@ -40,6 +40,7 @@
         </div>
 
         <section class="cards-section">
+            <h2>Planos Disponíveis</h2>
             <div class="cards-container">
                 <div class="card">
                     <div class="imagemdinheiro">
@@ -53,19 +54,119 @@
                     </div>
                     <div class="card-features">
                         <div class="feature-item">
-                            <img src="img/icons8-usuário-24 (1).png" alt="Ícone de usuário">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
                             <p>Versão desktop disponível</p>
                         </div>
                         <div class="feature-item">
-                            <img src="img/icons8-usuário-24 (1).png" alt="Ícone de usuário">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
                             <p>Suporte para até 30 usuários</p>
                         </div>
                     </div>
                     <a href="#" class="buy-button">Comprar</a>
                 </div>
 
+                <div class="card">
+                    <div class="imagemdinheiro">
+                        <img src="img/money.png" alt="Ícone de dinheiro">
+                    </div>
+                    <h3 class="card-title">Plano Completo</h3>
+                    <p class="card-description">Usufrua de tudo que SIME pode oferecer</p>
+                    <div class="price-container">
+                        <span class="price">R$ 90</span>
+                        <span class="price-per-month">Por mês</span>
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Versão desktop disponível</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Upload de fotos nas solicitações</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Usuários ilimitados</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Até 5 administradores</p>
+                        </div>
+                    </div>
+                    <a href="#" class="buy-button">Comprar</a>
                 </div>
+
+                <div class="card">
+                    <div class="imagemdinheiro">
+                        <img src="img/money.png" alt="Ícone de dinheiro">
+                    </div>
+                    <h3 class="card-title">Plano Profissional</h3>
+                    <p class="card-description">Tudo que o plano completo oferece e muito mais.</p>
+                    <div class="price-container2">
+                        <span class="price">R$ 120</span>
+                        <span class="price-per-month">Por mês</span>
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Notificações de novas atualizações</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Comentários nos chamados</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Status dos chamados</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Administradores ilimitados</p>
+                        </div>
+                    </div>
+                    <a href="#" class="buy-button">Comprar</a>
+                </div>
+            </div>
         </section>
+
+        <section class="form-section">
+            <h2>Teste Gratuitamente</h2>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <h3>Teste o SIME gratuitamente por 30 dias</h3>
+            <form class="Campos">
+                <div class="input-container with-icon">
+                    <img src="img/usuario.png" alt="Ícone de usuário" class="input-icon"/>
+                    <input type="text" id="nome" placeholder="Seu nome"/>
+                </div>
+
+                <div class="input-container with-icon">
+                    <img src="img/escola.png" alt="Ícone de escola" class="input-icon"/>
+                    <input type="escola" id="escola" placeholder="Nome da escola ou empresa"/>
+                </div>
+                
+                <div class="input-container with-icon">
+                    <img src="img/email.png" alt="Ícone de usuário" class="input-icon"/>
+                    <input type="email" id="email" placeholder="Seu e-mail"/>
+                </div>
+                
+                <div class="input-container with-icon">
+                    <img src="img/telefone.png" alt="Icone de telefone" class="input-icon"/>
+                    <input type="telefone" id="telefone" placeholder="Telefone"/>
+                </div>
+
+                <div class="input-container with-icon">
+                    <img src="img/engrenagens.png" alt="Icone de engrenagens" class="input-icon"/>
+                    <input type="cargo" id="cargo" placeholder="Cargo na instituição"/>
+                </div>
+                
+                <small id="textForm"></small>
+
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
+        
     </main>
     <hr>
     <footer>
@@ -76,7 +177,6 @@
                 <li class="footer-subtitle">Preços</li>
             </ul>
             <img src="img/logo.png" width="180px">
-
         </div>
         <div class="contact-icons">
             <img src="img/IG.png">
@@ -84,6 +184,7 @@
             <img src="img/github.png">
         </div>
     </footer>
-    
+
+    <script src="js/preco.js"></script>
 </body>
 </html>

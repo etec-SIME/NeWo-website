@@ -47,7 +47,7 @@
                         <img src="img/money.png" alt="Ícone de dinheiro">
                     </div>
                     <h3 class="card-title">Plano Inicial</h3>
-                    <p class="card-description">Perfeito para começar com o SIME</p>
+                    <p class="card-description">Perfeito para começar com o SIME.</p>
                     <div class="price-container">
                         <span class="price">R$ 30</span>
                         <span class="price-per-month">Por mês</span>
@@ -70,7 +70,7 @@
                         <img src="img/money.png" alt="Ícone de dinheiro">
                     </div>
                     <h3 class="card-title">Plano Completo</h3>
-                    <p class="card-description">Usufrua de tudo que SIME pode oferecer</p>
+                    <p class="card-description">Usufrua de tudo que SIME pode oferecer.</p>
                     <div class="price-container">
                         <span class="price">R$ 90</span>
                         <span class="price-per-month">Por mês</span>
@@ -101,7 +101,7 @@
                         <img src="img/money.png" alt="Ícone de dinheiro">
                     </div>
                     <h3 class="card-title">Plano Profissional</h3>
-                    <p class="card-description">Tudo que o plano completo oferece e muito mais.</p>
+                    <p class="card-description">Tudo que o plano completo oferece e<br> muito mais.</p>
                     <div class="price-container2">
                         <span class="price">R$ 120</span>
                         <span class="price-per-month">Por mês</span>
@@ -139,26 +139,31 @@
                 <div class="input-container with-icon">
                     <img src="img/usuario.png" alt="Ícone de usuário" class="input-icon"/>
                     <input type="text" id="nome" placeholder="Seu nome"/>
+                    <small id="textNome"></small>
                 </div>
 
                 <div class="input-container with-icon">
                     <img src="img/escola.png" alt="Ícone de escola" class="input-icon"/>
                     <input type="escola" id="escola" placeholder="Nome da escola ou empresa"/>
+                    <small id="textEscola"></small>
                 </div>
                 
                 <div class="input-container with-icon">
                     <img src="img/email.png" alt="Ícone de usuário" class="input-icon"/>
                     <input type="email" id="email" placeholder="Seu e-mail"/>
+                    <small id="textEmail"></small>
                 </div>
                 
                 <div class="input-container with-icon">
                     <img src="img/telefone.png" alt="Icone de telefone" class="input-icon"/>
-                    <input type="telefone" id="telefone" placeholder="Telefone"/>
+                    <input type="text" id="telefoneInput" oninput="mascaraDeTelefone(this)" placeholder="Telefone">
+                    <small id="textTelefone"></small>
                 </div>
 
                 <div class="input-container with-icon">
                     <img src="img/engrenagens.png" alt="Icone de engrenagens" class="input-icon"/>
                     <input type="cargo" id="cargo" placeholder="Cargo na instituição"/>
+                    <small id="textCargo"></small>
                 </div>
                 
                 <small id="textForm"></small>

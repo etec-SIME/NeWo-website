@@ -138,7 +138,7 @@ li{
 
 .cards-container {
     display: flex;
-    gap: 30px;
+    gap: 70px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -147,7 +147,7 @@ li{
     background: #17171E;
     border: 1px solid #525252;
     border-radius: 5px;
-    width: 323px;
+    width: 365px;
     height: 560px;
     display: flex;
     flex-direction: column;
@@ -278,17 +278,17 @@ li{
     margin-bottom: 5rem;
 }
 
-.form-section h3 {
+.form-section .h3{
     font-family: 'Kantumruy';
-    font-style: normal;
-    font-weight: 400;
+    font-style: light;
+    font-weight: 200;
     font-size: 20px;
     line-height: 36px;
     color: #FFFFFF;
-    margin-bottom: 30px;
 }
 
 .Campos {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -317,12 +317,14 @@ li{
     z-index: 10;
 }
 
-.input-container label {
+.input-container ::placeholder {
     font-family: 'Kantumruy';
+    font-style: normal;
     font-weight: 300;
     font-size: 20px;
     color: #A55FE6;
     margin-bottom: 5px;
+    margin-top: 60px;
 }
 
 .input-container input,
@@ -394,7 +396,7 @@ li{
 .c3 {
     width: 371px;
     height: 335px;
-    left: 890px;
+    left: 1520px;
     top: 1699px;
     background: #6D00A0;
     filter: blur(200px);

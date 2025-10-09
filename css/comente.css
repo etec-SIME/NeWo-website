@@ -21,11 +21,10 @@ a {
     color: inherit;
 }
 
-/* HEADER */
 #nav {
     display: flex;
     justify-content: space-between;
-    padding: 5.2vh; /* espaço dos elementos do menu do topo */
+    padding: 5.2vh;
     align-items: center;
 }
 
@@ -81,9 +80,7 @@ a {
     color: #A55FE6;
     font-weight: 500;
     border-bottom: 0.18vh solid #A55FE6; 
-    padding-bottom: 0.46vh; 
-}
-
+    padding-bottom: 0.46vh; }
 
 .introduction {
     display: flex;
@@ -91,13 +88,13 @@ a {
     justify-content: center; 
     align-items: center;
     margin-top: 17.5vh;
-}
+} 
 
 
 .imagem img {
-    width: 70vh;
-    height: 70vh; 
-    margin-top: 0; 
+    width: 68vh;
+    height: 68vh; 
+    margin-top: 6vh; 
     margin-left: 0; 
 }
 
@@ -122,24 +119,138 @@ a {
 
 .subtitle {
     font-weight: 500;
-    font-size: 14vh; 
+    font-size: 12vh; 
     color: white;
-    margin-left: 0; 
+    margin-left: 22vh; 
+    margin-top: -26vh; 
 }
 
 .introduction-text {
     margin-top: 1.5rem;
     font-weight: 300;
     color: #E5E5E5;
-    text-align: left; 
+    text-align: right; 
     font-size: 3vh; 
     line-height: 1.5;
-    margin-left: 0; 
+    margin-right: 7vh; 
+}
+
+hr {
+    border-color: rgb(143, 140, 140);
+    border-width: 0.09vh; 
+}
+
+.comentario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 10vh; 
+    margin-bottom: 10vh; 
+    gap: 10vh;
+    margin-right: 0vh;
+}
+
+.comentario-conteudo {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vh; 
+    align-items: flex-start;
+}
+
+.subtitle-comentario {
+    font-weight: 500;
+    font-size: 8.5vh; 
+    color: white;
+    margin-bottom: 3vh; 
+    margin-top: 0; 
+    margin-left: 0;
+}
+
+.comentario .computador img {
+    width: 68vh; 
+    height: auto; 
+    display: block;
+    margin-top: 10vh; 
+    margin-left: 32vh;
+}
+
+.Campos {
+    margin: 0; 
+    padding: 0;
+    width: 100%; 
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.input-container.with-icon {
+    position: relative;
+    margin-bottom: 3vh; 
+}
+
+.input-field-group {
+    display: flex;
+    align-items: center; 
+    position: relative; 
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1.5vh;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.6vh;
+    z-index: 10;
+}
+.input-container.with-icon .input-field-group input {
+    flex-grow: 1; 
+    padding-left: 5.85vh !important; 
+    background-color: transparent;
+    border: 0.13vh solid #B784E7;
+    border-radius: 0.65vh; 
+    width: 100%;
+    padding: 1.95vh; 
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-size: 2.1vh;
+    margin-bottom: 0; 
+}
+
+
+#textNome, #textComente, #textForm {
+    color: #fff; 
+    font-size: 0.9em;
+    padding-top: 0.5vh; 
+    min-height: 2.5vh; 
+    display: block;
+    margin-top: 0; 
+}
+
+.input-container ::placeholder {
+    font-family: 'Kantumruy';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.2vh;
+    color: #A55FE6;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+    outline: none;
+    border-color: #A55FE6;
 }
 
 .linear-gradient-btn {
-    margin-top: 1.5rem;
-    margin-bottom: 16%;
+    margin-top: 3vh; 
+    margin-bottom: 0;
     width: 32vh; 
     height: 9vh; 
     background-image: linear-gradient(to bottom right, #AE8DCD, #A55FE6, #7C3ABA, #571891);
@@ -149,15 +260,129 @@ a {
     border-radius: 0.28vh; 
     border: none;
     cursor: pointer;
-    align-self: flex-start; /* Alinha o botão com o texto da lista */
+    align-self: flex-start; 
 }
 
-hr {
-    border-color: rgb(143, 140, 140);
-    border-width: 0.09vh; 
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh; 
 }
 
-/* FOOTER */
+.feedback-text {
+    font-size: 2vh;
+    color: #E5E5E5;
+}
+
+.estrelas{
+    display: flex;
+}
+
+.star-icon {
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 5vh; 
+    border: none; 
+}
+
+.star-icon::before {
+    content: "\2606"; 
+    color: #FFFFFF; 
+}
+
+.star-icon.ativo::before {
+    content: "\2605"; 
+    color: #A55FE6; 
+}
+
+.feedbacks {
+    padding: 0 10% 5% 10%;
+    margin-top: 8vh;
+}
+
+#comentarios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 3.9vh;
+    max-width: 104vh; 
+    margin: 0 auto;
+}
+
+.comentario-item {
+    background-color: #141619; 
+    border: 0.13vh solid #8D8D8D;
+    border-radius: 1.05vh; 
+    padding: 2.6vh;
+    box-shadow: 0 0.52vh 1.05vh rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 4vh 1fr auto; 
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+        "icone autor metadata"
+        "icone texto metadata";
+    align-items: start;
+    column-gap: 1.5vh; 
+}
+
+.comentario-icone {
+    grid-area: icone;
+    width: 10vh; 
+    height: 10vh;
+    align-items: center;
+}
+
+.comentario-icone img{
+    width: 8vh; 
+    height: 8vh;
+    align-items: center;
+}
+
+.comentario-autor-wrapper {
+    grid-area: autor;
+}
+
+.comentario-autor {
+    font-size: 2.5vh;
+    color: #A55FE6; 
+    font-weight: 600;
+    margin-left: 5vh;
+}
+
+.comentario-metadata {
+    grid-area: metadata;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    justify-content: flex-start; 
+    gap: 0.5vh; 
+    padding-left: 1.5vh; 
+}
+
+.comentario-rating {
+    font-size: 4vh;
+}
+
+.comentario-data {
+    color: #C0C0C0;
+    font-size: 1.7vh;
+}
+
+.comentario-texto {
+    grid-area: texto;
+    font-size: 2.5vh;
+    color: #E5E5E5;
+    line-height: 1.4;
+    margin-top: 0.5vh; 
+    margin-bottom: 0; 
+    margin-left: 5vh;
+}
+
+.comentario-estrela {
+    margin-right: 0.26vh;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -205,10 +430,10 @@ footer {
 
 .c1 {
     position: absolute;
-    width: 70vh; 
-    height: 70vh; 
-    left: 5.5vh; 
-    top: 33vh; 
+    width: 80vh; 
+    height: 80vh; 
+    left: 15vh; 
+    top: 50vh; 
     z-index: -1;
     background: #6D00A0;
     filter: blur(27.78vh); 

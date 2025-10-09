@@ -14,14 +14,14 @@
             </div>
             <div class="menu-nav">
                 <ul class="menu-list">
-                    <li><a href="index.html">HOME</a></li>        
+                    <li><a href="index.html">HOME</a></li> 
                     <li><a href="sime.html">SIME</a></li> 
                     <li><a href="preco.html">NOSSOS PREÇOS</a></li>
                     <li><a href="contato.html">CONTATO</a></li> 
                 </ul>
             </div>
             <div class="comment">
-                <p class="menu-ativo">COMENTE</p>
+                <p class="menu-ativo"><a href="comente.html">COMENTE</a></p>
             </div>
             <div class="c1"></div>
         </nav>
@@ -35,14 +35,65 @@
             <ul class="introduction-list">
                 <li class="subtitle">Comente aqui</li>
                 <li class="introduction-text">Gostou do SIME? Deixe seu comentário!<br>
-                     Sua participação faz toda a diferença e nos ajuda a entender melhor<br>
-                      suas necessidades. <br>
-                      Aqui, sua voz é ouvida — compartilhe suas ideias, dúvidas ou opiniões<br> e enriqueça ainda mais esta conversa.</li>
+                    Sua participação faz toda a diferença e nos ajuda a entender melhor<br>
+                    suas necessidades. <br>
+                    Aqui, sua voz é ouvida — compartilhe suas ideias, dúvidas ou opiniões<br> e enriqueça ainda mais esta conversa.
+                </li>
             </ul>
-           <!-- <button class="linear-gradient-btn">LER SOBRE</button>-->
         </div>
+        
+        <div class="comentario">
+            <div class="comentario-conteudo">
+                <h2 class="subtitle-comentario">Adicione seu Comentário</h2> 
+                
+                <form class="Campos" id="formulario-comentario">
+                    
+                    <div class="input-container with-icon">
+                        <div class="input-field-group"> 
+                            <img src="img/usuario.png" alt="nome" class="input-icon"/>
+                            <input type="text" id="nome" placeholder="Seu nome"/>
+                        </div>
+                        <small id="textNome"></small>
+                    </div>
+                    
+                    <div class="input-container with-icon">
+                        <div class="input-field-group">
+                            <img src="img/balon-icon.png" alt="Ícone de comentário" class="input-icon"/>
+                            <input type="text" id="comente" placeholder="Comente aqui..."/>
+                        </div>
+                        <small id="textComente"></small>
+                    </div>
+                
+                    <div class="avaliacao">
+                        <ul class="estrelas">
+                            <li class="star-icon" data-avaliação="1"></li> 
+                            <li class="star-icon" data-avaliação="2"></li> 
+                            <li class="star-icon" data-avaliação="3"></li>
+                            <li class="star-icon" data-avaliação="4"></li>
+                            <li class="star-icon" data-avaliação="5"></li> 
+                        </ul>
+                        <p class="feedback-text">Seu feedback sobre o SIME</p>
+                    </div>
+                    
+                    <small id="textForm" style="color: #fff; margin-top: 1vh; display: block;"></small>
+                    
+                    <button class="linear-gradient-btn" type="submit">ENVIAR</button>
+                </form>
+                
+            </div> 
+            <div class="computador">
+                <img src="img/computador.png">
+            </div>
+        </div>
+        
+        <section class="feedbacks">
+            <div class="comentarios-existentes" id="comentarios-lista"> </div>
+        </section>
+        
     </main>
+    
     <hr>
+    
     <footer>
         <div class="info">
             <ul class="footer-list">
@@ -60,5 +111,6 @@
         </div>
     </footer>
     
+    <script src="js/comente.js"></script>
 </body>
 </html>

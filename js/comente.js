@@ -53,7 +53,7 @@ form.addEventListener('submit', (e) => {
        console.log("Requisição não atendida devido a falha na validação dos campos.");
     }
 });
-
+    
 function criarNovoComentario(nomeAutor, textoComentario, rating) {
     if (!comentariosLista) return;
 
@@ -69,24 +69,61 @@ function criarNovoComentario(nomeAutor, textoComentario, rating) {
     }
 
     novoComentario.innerHTML = `
-        <div class="comentario-icone">
-            <img src="img/user.png">
-        </div> 
-        
-        <div class="comentario-autor-wrapper">
-            <h4 class="comentario-autor">${nomeAutor}</h4>
-        </div>
 
-        <div class="comentario-metadata">
-            <div class="comentario-rating">${estrelasHTML}</div>
-            <small class="comentario-data">${new Date().toLocaleDateString('pt-BR')}</small>
-        </div>
+            <div class="comentario-icone">
+                <img src="img/user.png">
+            </div> 
+            
+            <div class="comentario-autor-wrapper">
+                <h4 class="comentario-autor">${nomeAutor}</h4>
+            </div>
 
-        <p class="comentario-texto">${textoComentario}</p>
+            <div class="comentario-metadata">
+                <div class="comentario-rating">${estrelasHTML}</div>
+                <small class="comentario-data">${new Date().toLocaleDateString('pt-BR')}</small>
+            </div>
+
+            <p class="comentario-texto">${textoComentario}</p>
     `;
 
-    comentariosLista.prepend(novoComentario);
+    comentariosLista.prepend(novoComentario);  
+
+    /*PAGINATE */
+
+    let perPage = 4
+    const state = {
+        page: 1,
+        perPage,
+        totalPage: Math.ceil(comentariosLista.lenght/perPage)
+    }
+
+    const controls = {
+        next () {
+            state.page++
+
+            const lastPage = state.page > state.totalPage
+            if(lastPage) {
+                state.page--
+            }
+        },
+        prev(){},
+        goTo(){}
+    }
+
+    console.log(state.page)
+    controls.next()
+    console.log(state.page)
 }
+
+/*function populateList() {
+    const pagina = Array.from({ length: 4})
+    .map((comentariosLista, i) => `<div class="item">Item ${(i + 1)}</div>`)
+
+    const comentariosLista = documento.querySelector('#paginate .comentariosLista')
+    comentariosLista.innerHTML = pagina.join("")
+}   
+
+populateList()*/
 
 nome.addEventListener("keyup", () => {
     if(validatorNome(nome.value) != true) {

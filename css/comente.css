@@ -235,10 +235,10 @@ hr {
 }
 
 .input-container ::placeholder {
-    font-family: 'Kantumruy';
+    font-family: "Kantumruy Pro", sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 3.2vh;
+    font-weight: 400;
+    font-size: 3vh;
     color: #A55FE6;
 }
 
@@ -365,8 +365,10 @@ hr {
 }
 
 .comentario-data {
+    position: relative;
     color: #C0C0C0;
-    font-size: 1.7vh;
+    font-size: 1.4vh;
+    right: 4vh;
 }
 
 .comentario-texto {
@@ -428,6 +430,16 @@ footer {
     margin-right: 2rem;
 }
 
+.circulo{
+    position: absolute;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    right: 27vh;
+    top: 10.2vh;
+    background: linear-gradient(180deg, #C2C2C2 0%, #A55FE6 50%, #6D00A0 100%);
+}
+
 .c1 {
     position: absolute;
     width: 80vh; 
@@ -437,4 +449,15 @@ footer {
     z-index: -1;
     background: #6D00A0;
     filter: blur(27.78vh); 
+}
+
+.c2 {
+    position: absolute;
+    width: 68.91vh;
+    height: 73.61vh;
+    left: 46.74vh;
+    top: 220vh;
+    z-index: -1;
+    background: #571476;
+    filter: blur(27.78vh);
 }

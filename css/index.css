@@ -4,10 +4,23 @@
     margin: 0px;
     padding: 0px;
 }
+
+html{
+    font-size: 62.5%;
+}
+
+.main-container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
 body{
     background-color: #141619;
     margin: 0px;
     padding: 0px;
+    font-family: "Inter", sans-serif;
 }
 
 li{
@@ -15,63 +28,52 @@ li{
     text-wrap: nowrap;
 }
 
+
+
+
 /*HEADER*/
 #nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px;
     align-items: center;
-
+    font-size: 1.4rem;
 }
 
-.logo img{
-    margin-left: 1.667vw;
-}
-
-.menu-nav{
-    
+.nav-menu{
     display: flex;
-    margin-right: 10%;
-    margin-left: 18%;
     align-items: center;
 }
 
-.menu-nav ul{
+.menu-list{
     display: flex;
+    gap: 5rem;
+    margin-right: 8.2rem;
 }
 
-.menu-nav ul li{
+.menu-list li{
     color: #ffffff;
-    margin-right: 50px;
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
     margin-top: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 
-.comment{
-    margin-left: 8%;
-}
-
-.comment p{
+.nav-comment p{
     color: #ffffff;
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
     margin-top: 18px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 
+/*INTRODUÇÃO*/
+
 .introduction{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     margin-top: 8%;
 }
@@ -83,7 +85,7 @@ li{
 }
 
 .linear-gradient-title{
-    font-size: clamp(45px, 6vw, 7.5vw);
+    font-size: 7.5rem;
     font-weight: 500;
     font-style: normal;
     background-image: linear-gradient(to bottom, #CCCCCC, #A55FE6, #571891);
@@ -93,25 +95,27 @@ li{
     -webkit-text-fill-color: transparent;
     list-style: none;
 }
+
 .subtitle{
     font-weight: 500;
     font-style: normal;
-    font-size: clamp(40px, 6vw, 6.167vw);
+    font-size: 6.8rem;
     color: white;
 }
+
 .introduction-text{
     margin-top: 1.5rem ;
     font-weight: 300;
     font-style: normal;
     color: #E5E5E5;
     text-align: center;
-    font-size: clamp(16px, 2vw, 1.4rem);
-    line-height: 1.5;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
 
 }
 .linear-gradient-btn{
-    margin-top: 1.5rem ;
-    margin-bottom: 16% ;
+    margin-top: 2rem ;
+    margin-bottom: 20rem;
     width: clamp(100px, 10.417vw, 12.417vw);
     height: clamp(40px, 3.125vw, 5.125vw);
     background-image: linear-gradient(to bottom right, #AE8DCD, #A55FE6, #7C3ABA, #571891);
@@ -128,14 +132,14 @@ li{
 /*NOSSOS OBJETIVOS*/
 .scope-container{
     display: flex;
-    height: 90vh;
+    height:80vh;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    gap: 4rem;
 }
 
 .scope-title{
-    font-size: clamp(32px, 5vw, 7.3vw);
-    font-family: "Inter", sans-serif;
+    font-size: 5.6rem;
     font-weight: 500;
     color: #ffffff;
     text-wrap: nowrap;
@@ -145,23 +149,10 @@ li{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 85%;
-    height: 78%;
+    height: 65%;
     justify-items: center;
     align-items: end;
-}
-
-@media only screen and (max-width: 600px){
-    .scope-cards{
-        display: flex;
-        flex-direction: column;
-        width: 80vw;
-        height: 40vh;
-        justify-items: center;
-        align-items: center;
-        gap: 30px;
-        margin-top: 30px;
-    }
-
+    gap: 3rem;
 }
 
 .scope-card{
@@ -170,58 +161,45 @@ li{
     align-items: start;
     background-color: transparent;
     border: 1px solid #6D00A0;
-    width: 90%;
-    height: 80%;
+    aspect-ratio: 1 / 1;
+    width: 100%;      /* ocupa toda a coluna do grid */
+    height: auto;
 }
 
-
-.mission-icon{
-    max-width: clamp(45px, 4.6vw, 8vw);
-    margin-top: clamp(20px, 2vw, 4vw);
-    margin-left: clamp(26px, 2vw, 4vw);
-    margin-bottom: clamp(10px, 1vw, 4vw);
-}
-
-.vision-icon{
-    max-width: clamp(45px, 4.6vw, 8vw);
-    margin-top: clamp(20px, 2vw, 4vw);
-    margin-left: clamp(26px, 2vw, 4vw);
-    margin-bottom: clamp(10px, 1vw, 4vw);
-}
-
+.mission-icon,
+.vision-icon,
 .values-icon{
-    max-width: clamp(45px, 4.6vw, 8vw);
-    margin-top: clamp(20px, 2vw, 4vw);
-    margin-left: clamp(26px, 2vw, 4vw);
+    max-width: clamp(45px, 3.6vw, 8vw);
+    margin-top: clamp(20px, 3vw, 4vw);
+    margin-left: clamp(26px, 2.2vw, 4vw);
     margin-bottom: clamp(10px, 1vw, 4vw);
 }
+
 
 .scope-title-card{
-    font-size: clamp(25px, 3vw, 5vw);
+    font-size: clamp(25px, 2.2vw, 5vw);
     font-weight: 700;
     margin-top: clamp(10px, 1vw, 2vw);
-    margin-left: 2.1rem;
+    margin-left: 4rem;
     color: #E7B4FF;
-    font-family: "Inter", sans-serif;
 }
 
 .scope-text{
-    font-size: clamp(16px, 1.65vw, 2rem);
+    font-size: 1.8rem;
     font-weight: 300;
-    margin-top: clamp(10px, 1.8vw, 3vw);
-    margin-left: 2.1rem;
+    margin-top: clamp(10px, 1vw, 3vw);
+    margin-left: 4rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.6;
 }
 
 /*SOBRE NÓS*/
 
 .about-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 12rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
 }
 
 .about-us-container{
@@ -231,25 +209,27 @@ li{
 }
 
 .about-us-title{
-    font-size: clamp(32px, 5vw, 7.3vw);
-    font-family: "Inter", sans-serif;
+    font-size: 5.6rem;
+    font-weight: 500;
     color: #ffffff;
 }
 
 .about-us-text{
     margin-top: 1.2rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 300;
     line-height: 1.8;
     text-align: center;
 }
 
 .story-container{
+    margin-top: 20%;
+    margin-bottom: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .story-text-container{
@@ -259,26 +239,26 @@ li{
 }
 
 .story-title{
-    font-size: 2.8rem;
-    font-family: "Inter", sans-serif;
+    font-size: 5rem;
     font-weight: 300;
     color: #ffffff;
+    text-wrap: nowrap;
 }
 
 .story-text{
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 200;
     margin-top: 1.6rem;
     margin-left: 1rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.6;
 }
 
 .story-icon{
-    scale: 58%;
+    max-width: 42%;;
 }
 
+/*BENÉFICIOS DO NOSSO SISTEMA*/
 .benefits-container{
     display: flex;
     flex-direction: row;
@@ -299,23 +279,21 @@ li{
 }
 
 .benefits-title{
-    font-size: 2.8rem;
-    font-family: "Inter", sans-serif;
+    font-size: 5rem;
     font-weight: 300;
     color: #ffffff;
 }
 
 .benefits-subtiltle{
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 600;
     margin-top: 1.6rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.5;
 }
 
 .benefits-text{
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 300;
     margin-top: 1rem;
     color: #ffffff;
@@ -324,13 +302,13 @@ li{
 }
 
 .read-more{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: 500;
-    margin-top: 2.4rem;
-    font-family: "Inter", sans-serif;
+    margin-top: 2.2rem;
     color: #E7B4FF;
 }
 
+/*COLABORADORES*/
 .collaborators-container{
     margin-top: 2%;
     display: flex;
@@ -339,11 +317,10 @@ li{
 }
 
 .collaborators-title{
-    font-size: 4rem;
+    font-size: 5.6rem;
     font-weight: 500;
     margin-top: 1rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.4;
     letter-spacing: 0.2rem;
     margin-right: 300px;
@@ -354,6 +331,7 @@ li{
 
 }
 
+/*COMENTÁRIOS*/
 .comments-container{
     display: flex;
     flex-direction: column;
@@ -362,20 +340,18 @@ li{
 }
 
 .comments-title{
-    font-size: 3.5rem;
-    font-family: "Inter", sans-serif;
+    font-size: 5.6rem;
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 2rem;
 }
 
 .comments-text{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 300;
-    margin-top: 1.4rem;
+    margin-top: 1.2rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
-    line-height: 2;
+    line-height: 3.4rem;
     text-align: justify;
 }
 
@@ -390,7 +366,7 @@ li{
     flex-direction: row;
     align-items: center;
     border: 1px solid #A55FE6;
-    width: 790px;
+    width: 740px;
     height: 60px;
     margin-top: 4%;
 }
@@ -401,7 +377,8 @@ li{
     background-color: transparent;
     animation: none;
     transition: none;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    width: 100%;
 }
 
 input:focus {
@@ -413,8 +390,7 @@ input::placeholder {
 }
 
 .comment-click{
-    font-size: 1.1rem;
-    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #ffffff;
     margin-top: 6%;
@@ -428,8 +404,7 @@ input::placeholder {
 }
 
 .comment-message{
-    font-size: 0.9rem;
-    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
     font-weight: 200;
     color: #ffffff
 }
@@ -446,6 +421,7 @@ label{
     margin-right: 20px;
 }
 
+/*SOBRE O SIME*/
 .about-sime-container{
     display: flex;
     flex-direction: row;
@@ -453,16 +429,15 @@ label{
     margin-top: 15%;
 }
 
-.title-about-sime{
-    font-size: 4rem;
+.about-sime-title{
+    font-size: 5.5rem;
     font-weight: 500;
     margin-top: 1rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.4;
-    letter-spacing: 0.2rem;
     margin-left: 200px;
     margin-right: 180px;
+    text-wrap: nowrap;
 }
 
 .about-sime-container-text{
@@ -471,12 +446,11 @@ label{
     align-items: start;
 }
 
-.text-about-sime{
-    font-size: 1.4rem;
+.about-sime-text{
+    font-size: 1.9rem;
     font-weight: 200;
     margin-top: 1.5rem;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.6;
 }
 
@@ -487,23 +461,21 @@ label{
     margin-top: 20%;
 }
 
-.title-contact-us{
-    font-size: 4rem;
+.contact-us-title{
+    font-size: 5.6rem;
     font-weight: 500;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     margin-left: 200px;
     margin-right: 180px;
 }
 
-.text-contact-us{
+.contact-us-text{
     text-align: center;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 200;
     color: #ffffff;
-    font-family: "Inter", sans-serif;
     line-height: 1.8;
 }
 
@@ -569,6 +541,8 @@ footer{
     flex-direction: column;
     margin: 4% 10% 0% 14%;
     padding: 0% 0% 2% 0%;
+    width: 80%;
+    max-width: 1440px;
 
 }
 .info{
@@ -585,8 +559,7 @@ footer{
 .footer-title{
     color: white;
     font-weight: 400;
-    font-size: 1.2rem;
-    font-family: "Inter", sans-serif;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
 
 }
@@ -594,8 +567,7 @@ footer{
 .footer-subtitle{
     color: #E5E5E5;
     font-weight: 400;
-    font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
 }
 
@@ -607,7 +579,112 @@ footer{
     justify-content: center;
 }
 .contact-icons img{
-    width: 1.8rem;
-    margin-top: 8%;
+    width: 3rem;
+    margin-top: 4%;
     margin-right: 2rem;
+}
+
+
+/*RESPONSIVIDADE*/
+
+/*LAPTOP L*/
+@media (max-width: 1024px){
+   html{font-size: 52.5%;}
+
+    .main-container {
+        width: 90%;
+        max-width: 1024px;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .about-container{
+    margin-top: 12rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.about-us-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.about-us-title{
+    font-size: 5.6rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.about-us-text{
+    margin-top: 1.2rem;
+    color: #ffffff;
+    font-size: 1.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.story-container{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.story-text-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+}
+
+.story-title{
+    font-size: 5rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-wrap: nowrap;
+}
+
+.story-text{
+    font-size: 1.9rem;
+    font-weight: 200;
+    margin-top: 1.6rem;
+    margin-left: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.story-icon{
+    max-width: 42%;;
+}
+
+
+
+}
+
+/*MOBILE L*/
+@media (max-width: 425px){
+
+}
+
+/*MOBILE M*/
+@media (max-width: 375px){
+
+}
+
+@media only screen and (max-width: 600px){
+    .scope-cards{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 40vh;
+        justify-items: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
 }

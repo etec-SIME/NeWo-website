@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*=======INICIO=========*/
 * {
     margin: 0;
     padding: 0;
@@ -21,20 +22,21 @@ a {
     color: inherit;
 }
 
+/*=======HEADER=========*/
 #nav {
     display: flex;
     justify-content: space-between;
-    padding: 5.2vh;
+    padding: clamp(1.2vh, 3.2vh, 4.2vh);
     align-items: center;
 }
 
 .logo img {
-    margin-left: 5vh; 
+    margin-left: clamp(1vh, 3vh, 5vh);
 }
 
 .menu-nav {
     display: flex;
-    margin-right: 3vh; 
+    margin-right: clamp(0vh, 1vh, 2vh); 
 }
 
 .menu-nav ul {
@@ -42,9 +44,9 @@ a {
 }
 
 .menu-nav ul li {
-    font-size: 3vh;
-    margin-right: 11vh; 
-    margin-top: 2.4vh; 
+    font-size: clamp(1vh, 1.8vh, 3vh);
+    margin-right: clamp(9vh, 9vh, 11vh);  
+    margin-top: clamp(0.4vh, 1.2vh, 2.4vh);
     list-style: none;
 }
 
@@ -66,13 +68,14 @@ a {
 }
 
 .comment {
-    margin-right: 5.7vh; 
+    margin-right:clamp(2.7vh, 3.7vh, 4.7vh);  
+    margin-top: clamp(0.4vh, 1.2vh, 2.4vh);
 }
 
 .comment p {
     color: #ffffff;
-    font-size: 3vh; 
-    margin-top: 2.4vh; 
+    font-size: clamp(1vh, 1.8vh, 2vh);
+    margin-top: clamp(0.4vh, 0.4vh, 2.4vh);
     font-weight: 300;
 }
 
@@ -83,20 +86,22 @@ a {
     padding-bottom: 0.46vh; 
 }
 
+/*=======INTRODUÇÃO=========*/
+
 .introduction {
     display: flex;
     flex-direction: row; 
     justify-content: center; 
     align-items: center;
-    margin-top: 17.5vh;
+    margin-top: clamp(13.5vh, 15.5vh, 17.5vh);
 } 
 
 
 .imagem img {
-    width: 68vh;
-    height: 68vh; 
-    margin-top: 6vh; 
-    margin-left: 0; 
+    width: clamp(40vh, 52vh, 66vh);
+    height: clamp(40vh, 52vh, 68vh); 
+    margin-top: clamp(1vh, 3vh, 5vh); 
+    margin-right: clamp(10vh, 20vh,50vh);
 }
 
 .introduction-list {
@@ -104,30 +109,19 @@ a {
     flex-direction: column;
     align-items: flex-start; 
     margin-top: 0; 
-    margin-left: 5vh; 
-}
-
-.linear-gradient-title {
-    font-size: 5.5rem; 
-    font-weight: 500;
-    background-image: linear-gradient(to bottom, #CCCCCC, #A55FE6, #571891);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    list-style: none;
+    margin-left: clamp(3vh, 5vh, 3vh); 
 }
 
 .subtitle {
     font-weight: 500;
-    font-size: 12vh; 
+    font-size: clamp(3vh, 7vh, 9vh);
     color: white;
-    margin-left: 22vh; 
-    margin-top: -26vh; 
+    margin-left:clamp(10vh, 35vh, 60vh);
+    margin-bottom: clamp(1vh, 2vh, 3vh);
 }
 
 .introduction-text {
-    margin-top: 1.5rem;
+    margin-top:clamp( 1vh, 4vh, 7vh);
     font-weight: 300;
     color: #E5E5E5;
     text-align: right; 
@@ -141,6 +135,7 @@ hr {
     border-width: 0.09vh; 
 }
 
+/*=======COMENTARIO=========*/
 .comentario {
     display: flex;
     flex-direction: row;
@@ -177,6 +172,7 @@ hr {
     margin-left: 32vh;
 }
 
+/*=======CAMPOS=========*/
 .Campos {
     margin: 0; 
     padding: 0;
@@ -266,21 +262,14 @@ hr {
     align-self: flex-start; 
 }
 
+/*=======ESTRELAS=========*/
 .avaliacao {
     display: flex;
     align-items: center;
     gap: 1.5vh;
     margin-top: 2vh;
     margin-bottom: 2vh; 
-    width: 180vh;
-}
-
-.feedback-text {
-    font-size: 2vh;
-    color: #E5E5E5;
-    margin-left: 2vh;
-    margin-top: 1vh;
-    width: 40vh;
+    width: 160vh;
 }
 
 .estrelas{
@@ -304,12 +293,22 @@ hr {
     color: #A55FE6; 
 }
 
-
+/*=======FEESBACK=========*/
 .feedbacks {
     padding: 0 10% 5% 10%;
     margin-top: 8vh;
 }
 
+.feedback-text {
+    font-size: 2vh;
+    color: #E5E5E5;
+    margin-left: 2vh;
+    margin-top: 1vh;
+    width: 40vh;
+}
+
+
+/*=======COMENTARIO FEITO=========*/
 #comentarios-lista {
     display: flex;
     flex-direction: column;
@@ -401,6 +400,7 @@ hr {
     margin-right: 0.26vh;
 }
 
+/*=======PAGINAÇÃO=========*/
 .paginate {
     display: none; 
     justify-content: center;
@@ -445,6 +445,7 @@ hr {
     padding: 0 1vh;
 }
 
+/*=======FOOTER=========*/
 footer {
     display: flex;
     flex-direction: column;
@@ -490,7 +491,7 @@ footer {
     margin-right: 2rem;
 }
 
-
+/*=======CIRCULOS=========*/
 .circulo{
     position: absolute;
     width: 2.5vh;
@@ -535,4 +536,9 @@ footer {
 
 .c4, .c5, .c6, .c7 {
     display: none !important; 
+}
+
+
+@media(max-widht:1920px ){
+
 }

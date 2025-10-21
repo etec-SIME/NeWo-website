@@ -713,6 +713,78 @@ footer{
 
 }
 
+@media (max-width: 1380px){
+
+.scope-cards{
+    width: 90%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
+@media (max-width: 1305px){
+
+.scope-cards{
+    width: 95%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
+@media (max-width: 1238px){
+
+.scope-cards{
+    width: 100%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
+@media (max-width: 1198px){
+
+.scope-cards{
+    width: 103%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
+@media (max-width: 1160px){
+
+.scope-cards{
+    width: 108%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
+@media (max-width: 1111px){
+
+.scope-cards{
+    width: 115%;
+    height: 65%;
+    justify-items: center;
+    align-items: end;
+    gap: 3rem;
+}
+
+}
+
 
 /*MOBILE L*/
 @media (max-width: 428px){

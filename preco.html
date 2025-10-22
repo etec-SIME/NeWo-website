@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="css/preco.css">
 </head>
 <body>
-<header>
+<Header>
     <nav id="nav">
-        <div class="hamburger-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="logo"> 
+            <a href="index.html"><img src="img/logo.png" width="190px"></a>
         </div>
+        
+        <div class="menu-nav">
+            <ul class="menu-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">SIME</a></li>
+                <li><a href="preco.html" class="menu-ativo">NOSSOS PREÇOS</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </div>
+        
+        <div class="comment">
+            <p>COMENTE</p>
+            <div class="circulo"></div>
+        </div>
+        
+        <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
 
         <div class="menu-mobile">
             <ul class="menu-list">
@@ -24,21 +38,6 @@
             </ul>
         </div>
 
-        <div class="logo"> 
-            <a href="index.html"><img src="img/logo.png" width="190px"></a>
-        </div>
-        <div class="menu-nav">
-            <ul class="menu-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">SIME</a></li>
-                <li><a href="preco.html" class="menu-ativo">NOSSOS PREÇOS</a></li>
-                <li><a href="#">CONTATO</a></li>
-            </ul>
-        </div>
-        <div class="comment">
-            <p>COMENTE</p>
-            <div class="circulo"></div>
-        </div>
         <div class="c1"></div>
         <div class="c2"></div>
     </nav>
@@ -96,34 +95,35 @@
             <div class="c4"></div>
             <div class="c5"></div>
             <h3>Teste o SIME gratuitamente por 30 dias</h3>
-            <form class="Campos">
+            <form class="Campos" action="https://formspree.io/f/mwprjjwe" method="POST">
+                
                 <div class="input-container with-icon">
                     <img src="img/usuario.png" alt="Ícone de usuário" class="input-icon"/>
-                    <input type="text" id="nome" placeholder="Seu nome"/>
+                    <input type="text" id="nome" name="Nome Completo" placeholder="Seu nome"/> 
                     <small id="textNome"></small>
                 </div>
 
                 <div class="input-container with-icon">
                     <img src="img/escola.png" alt="Ícone de escola" class="input-icon"/>
-                    <input type="escola" id="escola" placeholder="Nome da escola ou empresa"/>
+                    <input type="text" id="escola" name="Escola ou Empresa" placeholder="Nome da escola ou empresa"/>
                     <small id="textEscola"></small>
                 </div>
                 
                 <div class="input-container with-icon">
                     <img src="img/email.png" alt="Ícone de usuário" class="input-icon"/>
-                    <input type="email" id="email" placeholder="Seu e-mail"/>
+                    <input type="email" id="email" name="_replyto" placeholder="Seu e-mail"/> 
                     <small id="textEmail"></small>
                 </div>
                 
                 <div class="input-container with-icon">
                     <img src="img/telefone.png" alt="Icone de telefone" class="input-icon"/>
-                    <input type="text" id="telefoneInput" oninput="mascaraDeTelefone(this)" placeholder="Telefone">
+                    <input type="text" id="telefoneInput" name="Telefone" oninput="mascaraDeTelefone(this)" placeholder="Telefone">
                     <small id="textTelefone"></small>
                 </div>
 
                 <div class="input-container with-icon">
                     <img src="img/engrenagens.png" alt="Icone de engrenagens" class="input-icon"/>
-                    <input type="cargo" id="cargo" placeholder="Cargo na instituição"/>
+                    <input type="text" id="cargo" name="Cargo" placeholder="Cargo na instituição"/> 
                     <small id="textCargo"></small>
                 </div>
                 

@@ -12,13 +12,22 @@ let textCargo = document.getElementById('textCargo');
 let form = document.querySelector('form');
 const hamburger = document.querySelector('.hamburger-icon');
 const menuMobile = document.querySelector('.menu-mobile');
+const buyButton = document.querySelector('.buy-button'); 
+const formSection = document.querySelector('.form-section'); 
+const emailDestino = 'tcchas2@gmail.com';
 
+if (buyButton && formSection) {
+    buyButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        formSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+}
 
 hamburger.addEventListener('click', () => {
     menuMobile.classList.toggle('open');
-    hamburger.classList.toggle('active'); 
 });
-
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -32,26 +41,72 @@ form.addEventListener('submit', (e) => {
     
     mascaraDeTelefone(telefone);
 
-    if (nome.value === '' || escola.value === '' || email.value === '' || telefone.value === '' || cargo.value === '') {
-        textForm.textContent = "Você precisa preencher todos os campos.";
-        return;
+    let temErro = false;
+    
+    if (nome.value === '') { textNome.textContent = "O Nome é obrigatório."; temErro = true; }
+    if (escola.value === '') { textEscola.textContent = "O Nome da Escola/Empresa é obrigatório."; temErro = true; }
+    if (email.value === '') { textEmail.textContent = "O E-mail é obrigatório."; temErro = true; }
+    if (telefone.value === '' || telefone.value.length < 15) { 
+        textTelefone.textContent = "O Telefone é obrigatório."; 
+        temErro = true; 
+    }
+    if (cargo.value === '') { textCargo.textContent = "O Cargo é obrigatório."; temErro = true; }
+
+    if (nome.value !== '' && !validatorNome(nome.value)) { 
+        textNome.textContent = "O formato do Nome deve conter apenas letras, espaços ou hífens."; temErro = true; 
+    }
+    if (escola.value !== '' && !validatorEscola(escola.value)) { 
+        textEscola.textContent = "O formato da Escola/Empresa está incorreto."; temErro = true; 
+    }
+    if (email.value !== '' && !validatorEmail(email.value)) { 
+        textEmail.textContent = "O formato do e-mail deve ser Ex: abc@gmail.com"; temErro = true; 
+    }
+    if (telefone.value !== '' && !validatorTelefone(telefone.value)) { 
+        textTelefone.textContent = "O formato do Telefone deve ser (XX) XXXXX-XXXX."; temErro = true; 
+    }
+    if (cargo.value !== '' && !validatorCargo(cargo.value)) { 
+        textCargo.textContent = "O formato do Cargo está incorreto."; temErro = true; 
     }
 
-    if (
-        validatorNome(nome.value) &&
-        validatorEscola(escola.value) &&
-        validatorEmail(email.value) &&
-        validatorTelefone(telefone.value) &&
-        validatorCargo(cargo.value)
-      ){
-        textForm.textContent = "";
-        console.log('Formulário enviado com sucesso!');
-        
-    } else {
+    if (temErro) {
         textForm.textContent = "Corrija os campos com erros antes de enviar.";
-        console.log("Requisição não atendida. Erros de validação.");
+    } else {
+        enviarFormspreeAjax();
     }
 });
+
+async function enviarFormspreeAjax() {
+    const formData = new FormData(form);
+    const submitButton = document.querySelector('.submit-button');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            form.reset();
+            textForm.textContent = "Mensagem enviada com sucesso! Entraremos em contato em breve.";
+            setTimeout(() => {
+                textForm.textContent = "";
+            }, 10000);
+        } else {
+            const data = await response.json();
+            textForm.textContent = data.error || "Houve um erro ao enviar a mensagem. Tente novamente.";
+        }
+    } catch (error) {
+        textForm.textContent = "Erro de conexão. Verifique sua internet.";
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar';
+    }
+}
 
 nome.addEventListener("keyup", () => {
     if(!validatorNome(nome.value)) {
@@ -79,7 +134,6 @@ email.addEventListener("keyup", () => {
 
 telefone.addEventListener("keyup", () => {
     mascaraDeTelefone(telefone); 
-
     if(!validatorTelefone(telefone.value)) {
         textTelefone.textContent = "O formato deve ser (XX) XXXXX-XXXX.";
     } else {

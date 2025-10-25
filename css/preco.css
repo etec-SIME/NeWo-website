@@ -94,48 +94,103 @@ a {
 }
 
 
-.hamburger-icon, .menu-mobile {
-    display: none; 
+.hamburger-icon {
+    width: 1vw;
+    height: 1vw;
+    display: none;
 }
+
+/*=======================MENU MOBILE================================*/
 
 .menu-mobile {
     position: fixed;
     top: 0;
-    left: -100%; 
-    width: 80%;
+    right: -100vw;
+    width: 50vw; 
     max-width: 300px;
     height: 100vh;
-    background-color: #141619;
+    background-color: #141619; 
     z-index: 10000;
-    padding-top: 100px;
-    transition: left 0.3s ease-in-out;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    padding: 3vw 2vw;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0.2vw 0 1vw rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column; 
 }
 
 .menu-mobile.open {
-    display: flex;
-    left: 0; 
+    right: 0; 
+}
+
+.menu-mobile .fechar {
+    position: absolute;
+    top: 7vw;
+    right: 7vw;
+    width: 3vw;
+    height: 3vw;
+    max-width: 30px; 
+    max-height: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    color: #FFFFFF; 
 }
 
 .menu-mobile .menu-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
+    align-items: flex-start; 
+    width: 100%; 
+    padding: 0;
+    margin-top: 18vw;
+}
+
+.menu-mobile .menu-list li {
+    width: 100%;
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    padding: 1.5vw 2vw;
+    margin-bottom: 10vw;
+}
+
+.menu-mobile .menu-list li img {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 2vw;
 }
 
 .menu-mobile .menu-list li a {
     color: #FFFFFF; 
-    font-size: clamp(1rem, 5vw, 24px); 
+    font-size: 3vw;
     font-weight: 300;
+    margin-left: 0; 
+    flex-grow: 1;
 }
 
 .menu-mobile .menu-list li a.menu-ativo {
-    color: #A55FE6;
-    font-weight: 600;
-    border-bottom: 2px solid #A55FE6;
-    padding-bottom: 5px;
+    color: #A55FE6; 
+    font-weight: 600; 
+    background-color: transparent;
+    border-bottom: none; 
+    padding-bottom: 0;
 }
+
+.menu-mobile .menu-list li:has(a.menu-ativo) img {
+    filter: invert(40%) sepia(80%) saturate(2000%) hue-rotate(260deg) brightness(120%);
+}
+
+.menu-mobile .menu-list li:has(a.menu-ativo)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.4vw;
+    height: 100%;
+    background-color: #A55FE6; 
+    border-radius: 0 0.5vw 0.5vw 0; 
+}
+
+
 /*=======================INTRODUÇÃO================================*/
 
 .introduction {
@@ -640,6 +695,10 @@ hr {
         display: none ;
     }
 
+    .menu-mobile {
+        display: flex;
+    }
+
     .hamburger-icon {
         display: block; 
         width: 30px; 
@@ -676,7 +735,7 @@ hr {
     }
     
     .Campos {
-        max-width: 90%; /* Ajusta a largura máxima para 90% da tela */
+        max-width: 90%; 
     }
 
     .price {
@@ -722,7 +781,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .subtitle {
         font-size: 3.12vw;
     }
@@ -815,84 +874,20 @@ hr {
         left: 0vw;
         top: 150vw;
     }
-}
-
-/*@media screen and (max-width: 576px) {
-    .introduction {
-        margin-top: 10vw;
-    }
-    
-    .subtitle {
-        font-size: 2.6vw;
-    }
-    
-    .introduction-text {
-        font-size: 0.94vw;
-        padding: 0vw 1.04vw;
-    }
-    
-    .card {
-        width: 95%;
-        height: auto;
-    }
-    
-    .feature-item {
-        margin-bottom: 0.83vw;
-    }
-    
-    .Campos {
-        gap: 1.04vw;
-    }
-    
-    .submit-button {
-        width: 100%;
-    }
-    
-    .circulo{
-        width: 1.0vw;
-        height: 1.0vw;
-        right: 4vw;
-        top: 3.1vw;
-    }
-    
-    .c1 {
-        width: 80vw;
-        height: 70vw;
-        left: -15vw;
-        top: 15vw;
-    }
-    .c2 {
-        width: 60vw;
-        height: 50vw;
-        left: 5vw;
-        top: 50vw;
-    }
-    .c3 {
-        width: 35vw;
-        height: 30vw;
-        left: 90vw;
-        top: 180vw;
-    }
-    .c4 {
-        width: 35vw;
-        height: 30vw;
-        left: -15vw;
-        top: 220vw;
-    }
-    .c5 {
-        width: 20vw;
-        height: 18vw;
-        left: 5vw;
-        top: 190vw;
-    }
 }*/
 
 @media screen and (max-width: 520px) {
 
     .logo img{
-        margin-left: clamp(0.5vw, 3vw, 32px);
-        margin-top: clamp(0.5vw, 3vw, 32px);
+        margin-left: clamp(0.5vw, 5vw, 32px);
+        margin-top: clamp(0.5vw, 5vw, 32px);
         width: 115px; 
+    }
+
+    .hamburger-icon{
+        height: 5vw;
+        width: 6vw;
+        margin-right: 5vw;
     }
 
     .subtitle {
@@ -901,7 +896,7 @@ hr {
     }
 
     .introduction-text {
-        font-size: 2.1vw;
+        font-size: 2.4vw;
         margin-top: 2.1vw;
     }
 
@@ -910,8 +905,8 @@ hr {
     }
 
     .card {
-        width: 55vw;
-        height: 86vw;
+        width: 44vw;
+        height: 74vw;
         border-radius: 1vw;
     }
 
@@ -922,17 +917,17 @@ hr {
     }
 
     .imagemdinheiro {
-        width: 6vw;
-        height: 6vw;
+        width: 5vw;
+        height: 5vw;
     }
 
     .card-title {
         font-weight: 500;
-        font-size: 3.5vw;
+        font-size: 3vw;
         height: 7vw;
         line-height: 1.4;
         text-align: left;
-        margin-top: 6vw; 
+        margin-top: 3.5vw; 
         background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -940,38 +935,39 @@ hr {
     }
 
     .card-description {
-        font-size: 2.5vw;
+        font-size: 2vw;
         line-height: 1.4;
         text-align: left;
-        margin-top: 1.2vw; 
+        margin-bottom: 3vw; 
     }
 
     .feature-item img {
-        width: 3vw;
-        height: 3vw;
+        width: 2.7vw;
+        height: 2.7vw;
         margin-right: 0.5vw;
     }   
 
     .feature-item p {
-        font-size: 2.2vw;
+        font-size: 2vw;
         margin-top: 1.8vw;
         padding: 0.8vw;
     }
 
     .price {
-        font-size: 4.5vw;
-        margin-top: 3vw;
+        font-size: 4vw;
+        margin-top: 0vw;
     }
 
     .price-per-month {
-        font-size: 2.2vw;
-        margin-left: 2vw;
+        font-size: 1.7vw;
+        margin-left: 1vw;
+        margin-top: -3vw;
     }
 
     .buy-button {
-        width: 27vw;
-        height: 6.9vw;
-        font-size: 2vw;
+        width: 22vw;
+        height: 5.4vw;
+        font-size: 1.8vw;
         margin-bottom: 3vw;
     }
 
@@ -1070,4 +1066,50 @@ hr {
         top: 0vw;
         z-index: -1;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: clamp(3vw, 4.8vw, 70px) clamp(5vw, 8vw, 115px) 0 clamp(8vw, 11.2vw, 160px);
+        padding: 0 0 clamp(2vw, 4vw, 60px) 0;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info img {
+        width: 22%; 
+        height: 22%;
+        margin-bottom: 5vw;
+    }
+
+    .footer-list {
+        margin-bottom: clamp(0.5vw, 30vw, 16px);
+        padding: 0; 
+        list-style: none; 
+    }
+
+    .footer-title {
+        font-size: clamp(0.8vw, 1.8vw, 20px);
+        margin-top: clamp(1vw, 5vw, 24px);
+        margin-left: clamp(1.5vw, 3vw, 32px); 
+    }
+
+    .footer-subtitle {
+        margin-left: clamp(1.5vw, 3vw, 32px); 
+        font-size: clamp(0.7vw, 1.5vw, 18px);
+        margin-top: clamp(0.5vw, 1vw, 16px);
+        display: block;
+        text-align: left; 
+    }
+
+    .contact-icons img {
+        width: clamp(1.2vw, 3vw, 28px);
+        margin-bottom: clamp(0.5vw, 50vw, 12px);
+        margin-right: clamp(1.5vw, 2.17vw, 32px);
+    }
+
 }

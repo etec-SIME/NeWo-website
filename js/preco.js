@@ -12,9 +12,28 @@ let textCargo = document.getElementById('textCargo');
 let form = document.querySelector('form');
 const hamburger = document.querySelector('.hamburger-icon');
 const menuMobile = document.querySelector('.menu-mobile');
+const fecharIcon = document.querySelector('.menu-mobile .fechar');
 const buyButton = document.querySelector('.buy-button'); 
 const formSection = document.querySelector('.form-section'); 
 const emailDestino = 'tcchas2@gmail.com';
+
+function closeMobileMenu() {
+    menuMobile.classList.remove('open');
+}
+
+hamburger.addEventListener('click', () => {
+    menuMobile.classList.toggle('open');
+});
+
+fecharIcon.addEventListener('click', closeMobileMenu);
+
+document.addEventListener('click', (event) => {
+    if (menuMobile.classList.contains('open')) {
+        if (!menuMobile.contains(event.target) && !hamburger.contains(event.target)) {
+            closeMobileMenu();
+        }
+    }
+});
 
 if (buyButton && formSection) {
     buyButton.addEventListener('click', (e) => {
@@ -24,10 +43,6 @@ if (buyButton && formSection) {
         });
     });
 }
-
-hamburger.addEventListener('click', () => {
-    menuMobile.classList.toggle('open');
-});
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

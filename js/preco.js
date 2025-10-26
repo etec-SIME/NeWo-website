@@ -58,29 +58,49 @@ form.addEventListener('submit', (e) => {
 
     let temErro = false;
     
-    if (nome.value === '') { textNome.textContent = "O Nome é obrigatório."; temErro = true; }
-    if (escola.value === '') { textEscola.textContent = "O Nome da Escola/Empresa é obrigatório."; temErro = true; }
-    if (email.value === '') { textEmail.textContent = "O E-mail é obrigatório."; temErro = true; }
-    if (telefone.value === '' || telefone.value.length < 15) { 
-        textTelefone.textContent = "O Telefone é obrigatório."; 
+    if (nome.value === '') { 
+        textNome.textContent = "O Nome é obrigatório."; 
         temErro = true; 
     }
-    if (cargo.value === '') { textCargo.textContent = "O Cargo é obrigatório."; temErro = true; }
+    if (escola.value === '') { 
+        textEscola.textContent = "O Nome da Escola/Empresa é obrigatório."; 
+        temErro = true; 
+    }
+    if (email.value === '') { 
+        textEmail.textContent = "O E-mail é obrigatório."; 
+        temErro = true; 
+    }
+    if (telefone.value === '') { 
+        textTelefone.textContent = "O Telefone é obrigatório."; 
+        temErro = true; 
+    } else if (telefone.value.length < 15) { 
+        textTelefone.textContent = "O Telefone deve estar completo no formato (XX) XXXXX-XXXX."; 
+        temErro = true; 
+    }
+    if (cargo.value === '') { 
+        textCargo.textContent = "O Cargo é obrigatório."; 
+        temErro = true; 
+    }
 
     if (nome.value !== '' && !validatorNome(nome.value)) { 
-        textNome.textContent = "O formato do Nome deve conter apenas letras, espaços ou hífens."; temErro = true; 
+        textNome.textContent = "O formato do Nome deve conter apenas letras, espaços ou hífens."; 
+        temErro = true; 
     }
     if (escola.value !== '' && !validatorEscola(escola.value)) { 
-        textEscola.textContent = "O formato da Escola/Empresa está incorreto."; temErro = true; 
+        textEscola.textContent = "O formato da Escola/Empresa está incorreto. Use apenas letras, números e pontuações básicas."; 
+        temErro = true; 
     }
     if (email.value !== '' && !validatorEmail(email.value)) { 
-        textEmail.textContent = "O formato do e-mail deve ser Ex: abc@gmail.com"; temErro = true; 
+        textEmail.textContent = "O formato do e-mail deve ser Ex: nome@dominio.com"; 
+        temErro = true; 
     }
     if (telefone.value !== '' && !validatorTelefone(telefone.value)) { 
-        textTelefone.textContent = "O formato do Telefone deve ser (XX) XXXXX-XXXX."; temErro = true; 
+        textTelefone.textContent = "O formato do Telefone deve ser (XX) XXXXX-XXXX."; 
+        temErro = true; 
     }
     if (cargo.value !== '' && !validatorCargo(cargo.value)) { 
-        textCargo.textContent = "O formato do Cargo está incorreto."; temErro = true; 
+        textCargo.textContent = "O formato do Cargo está incorreto. Use apenas letras, espaços, hífens ou pontos."; 
+        temErro = true; 
     }
 
     if (temErro) {
@@ -127,40 +147,42 @@ nome.addEventListener("keyup", () => {
     if(!validatorNome(nome.value)) {
         textNome.textContent = "O formato do Nome deve conter apenas letras, espaços ou hífens.";
     } else {
-        textNome.textContent = " ";
+        textNome.textContent = "";
     }
 });
 
 escola.addEventListener("keyup", () => {
     if(!validatorEscola(escola.value)) {
-        textEscola.textContent = "O formato do nome da Escola/Empresa deve conter apenas letras, espaços ou hífens.";
+        textEscola.textContent = "O formato da Escola/Empresa está incorreto. Use apenas letras, números e pontuações básicas.";
     } else {
-        textEscola.textContent = " ";
+        textEscola.textContent = "";
     }
 });
 
 email.addEventListener("keyup", () => {
     if(!validatorEmail(email.value)) {
-        textEmail.textContent = "O formato do email deve ser Ex: abc@gmail.com";
+        textEmail.textContent = "O formato do e-mail deve ser Ex: nome@dominio.com";
     } else {
-        textEmail.textContent = " ";
+        textEmail.textContent = "";
     }
 });
 
 telefone.addEventListener("keyup", () => {
     mascaraDeTelefone(telefone); 
-    if(!validatorTelefone(telefone.value)) {
+    if(telefone.value.length > 0 && telefone.value.length < 15) {
+        textTelefone.textContent = "O Telefone deve estar completo no formato (XX) XXXXX-XXXX.";
+    } else if (telefone.value.length === 15 && !validatorTelefone(telefone.value)) {
         textTelefone.textContent = "O formato deve ser (XX) XXXXX-XXXX.";
     } else {
-        textTelefone.textContent = " ";
+        textTelefone.textContent = "";
     }
 });
 
 cargo.addEventListener("keyup", () => {
     if(!validatorCargo(cargo.value)) {
-        textCargo.textContent = "O formato do cargo deve ser Ex: Diretor.";
+        textCargo.textContent = "O formato do cargo está incorreto. Use apenas letras, espaços, hífens ou pontos.";
     } else {
-        textCargo.textContent = " ";
+        textCargo.textContent = "";
     }
 });
 
@@ -170,7 +192,7 @@ function validatorNome(nome){
 }
 
 function validatorEscola(escola){
-    let escolaPattern = /^[a-zA-Z0-9\s.,'&()-]+$/;
+    let escolaPattern = /^[a-zA-Z0-9\s.,'&()-]+$/; 
     return escolaPattern.test(escola);
 }
 
@@ -180,12 +202,12 @@ function validatorEmail(email) {
 }
 
 function validatorCargo(cargo){
-    let cargoPattern = /^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s.-]+$/;
+    let cargoPattern = /^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s.-]+$/; 
     return cargoPattern.test(cargo);
 }
 
 function validatorTelefone(telefone) {
-    let telefonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
+    let telefonePattern = /^\(\d{2}\) \d{5}-\d{4}$/; 
     return telefonePattern.test(telefone);
 }
 

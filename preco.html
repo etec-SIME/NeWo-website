@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso preço</title>
+    <link rel="stylesheet" href="css/preco.css">
+</head>
+<body>
+<Header>
+    <nav id="nav">
+        <div class="logo"> 
+            <a href="index.html"><img src="img/logo.png" width="190px"></a>
+        </div>
+        
+        <div class="menu-nav">
+            <ul class="menu-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">SIME</a></li>
+                <li><a href="preco.html" class="menu-ativo">NOSSOS PREÇOS</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </div>
+        
+        <div class="comment">
+            <p>COMENTE</p>
+            <div class="circulo"></div>
+        </div>
+        
+        <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
+
+        <div class="menu-mobile">
+            <img src="img/close.png" class="fechar">
+            <ul class="menu-list">
+                <li><img src="img/home.png"><a href="index.html">HOME</a></li>
+                <li><img src="img/engrenagem.png" class="sime"><a href="#">SIME</a></li>
+                <li><img src="img/dinheiro.png"><a href="preco.html" class="menu-ativo">NOSSOS PREÇOS</a></li>
+                <li><img src="img/phone.png"><a href="#">CONTATO</a></li>
+                <li><img src="img/comente.png"><a href="#">COMENTE</a></li>
+            </ul>
+        </div>
+
+        <div class="c1"></div>
+        <div class="c2"></div>
+    </nav>
+</header>
+
+    <main>
+        <div class="introduction">
+            <ul class="introduction-list">
+                <li class="subtitle">Nosso Preço</li>
+                <li class="introduction-text">Garanta agora o seu acesso ao SIME e leve a gestão da manutenção<br>
+                    escolar a outro nível! Escolha o plano ideal para a sua necessidade e <br>
+                    comece hoje mesmo a transformar a organização da sua escola.</li>
+            </ul>
+        </div>
+
+        <section class="cards-section">
+            <h2>Plano Disponível</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="imagemdinheiro">
+                        <img src="img/money.png" alt="Ícone de dinheiro">
+                    </div>
+                    <h3 class="card-title">Plano Profissional</h3>
+                    <p class="card-description">Tudo que o plano completo oferece e<br> muito mais.</p>
+                    <div class="price-container2">
+                        <span class="price">R$ 120</span>
+                        <span class="price-per-month">Por mês</span>
+                    </div>
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Notificações de novas atualizações</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Comentários nos chamados</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Status dos chamados</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/usuario.png" alt="Ícone de usuário">
+                            <p>Administradores ilimitados</p>
+                        </div>
+                    </div>
+                    <a href="#" class="buy-button">Comprar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Teste Gratuitamente</h2>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <h3>Teste o SIME gratuitamente por 30 dias</h3>
+            <form class="Campos" action="https://formspree.io/f/mwprjjwe" method="POST">
+                
+                <div class="input-container with-icon">
+                    <img src="img/usuario.png" alt="Ícone de usuário" class="input-icon"/>
+                    <input type="text" id="nome" name="Nome Completo" placeholder="Seu nome"/> 
+                    <small id="textNome"></small>
+                </div>
+
+                <div class="input-container with-icon">
+                    <img src="img/escola.png" alt="Ícone de escola" class="input-icon"/>
+                    <input type="text" id="escola" name="Escola ou Empresa" placeholder="Nome da escola ou empresa"/>
+                    <small id="textEscola"></small>
+                </div>
+                
+                <div class="input-container with-icon">
+                    <img src="img/email.png" alt="Ícone de usuário" class="input-icon"/>
+                    <input type="email" id="email" name="_replyto" placeholder="Seu e-mail"/> 
+                    <small id="textEmail"></small>
+                </div>
+                
+                <div class="input-container with-icon">
+                    <img src="img/telefone.png" alt="Icone de telefone" class="input-icon"/>
+                    <input type="text" id="telefoneInput" name="Telefone" oninput="mascaraDeTelefone(this)" placeholder="Telefone">
+                    <small id="textTelefone"></small>
+                </div>
+
+                <div class="input-container with-icon">
+                    <img src="img/engrenagens.png" alt="Icone de engrenagens" class="input-icon"/>
+                    <input type="text" id="cargo" name="Cargo" placeholder="Cargo na instituição"/> 
+                    <small id="textCargo"></small>
+                </div>
+                
+                <small id="textForm"></small>
+
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
+    <hr>
+    <footer>
+        <div class="info">
+            <ul class="footer-list">
+                <li class="footer-title">NEWO AGRADECE</li>
+                <li class="footer-subtitle">SIME</li>
+                <li class="footer-subtitle">Preços</li>
+            </ul>
+            <img src="img/logo.png" width="180px">
+        </div>
+        <div class="contact-icons">
+            <img src="img/IG.png">
+            <img src="img/gmail.png">
+            <img src="img/github.png">
+        </div>
+    </footer>
+
+    <script src="js/preco.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comente</title>
+    <link rel="stylesheet" href="css/comente.css">
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div class="logo"> 
+                <a href="index.html"><img src="img/logo.png" width="190px"></a>
+            </div>
+            <div class="menu-nav">
+                <ul class="menu-list">
+                    <li><a href="index.html">HOME</a></li> 
+                    <li><a href="sime.html">SIME</a></li> 
+                    <li><a href="preco.html">NOSSOS PREÇOS</a></li>
+                    <li><a href="contato.html">CONTATO</a></li> 
+                </ul>
+            </div>
+            <div class="comment">
+                <div class="circulo"></div>
+                <p class="menu-ativo"><a href="comente.html">COMENTE</a></p>
+            </div>
+            <div class="c1"></div>
+            <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
+
+            <div class="menu-mobile">
+                <img src="img/fechar.png" class="fechar">
+                <ul class="menu-list">
+                    <li><img src="img/home.png"><a href="index.html">HOME</a></li>
+                    <li><img src="img/engrenagem.png" class="sime"><a href="#">SIME</a></li>
+                    <li><img src="img/dinheiro.png"><a href="preco.html" >NOSSOS PREÇOS</a></li>
+                    <li><img src="img/phone.png"><a href="#">CONTATO</a></li>
+                    <li><img src="img/comente.png"><a href="#" class="menu-ativo">COMENTE</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="introduction">
+            <div class="imagem">
+                <img src="img/celular2.png">
+            </div>
+            <ul class="introduction-list">
+                <li class="subtitle">Comente aqui</li>
+                <li class="introduction-text">Gostou do SIME? Deixe seu comentário!<br>
+                    Sua participação faz toda a diferença e nos ajuda a entender melhor<br>
+                    suas necessidades. <br>
+                    Aqui, sua voz é ouvida — compartilhe suas ideias, dúvidas ou opiniões<br> e enriqueça ainda mais esta conversa.
+                </li>
+
+                <li class="introduction-text-mobile">Gostou do SIME? Deixe seu comentário!
+                    Sua participação faz toda a diferença e nos ajuda a entender melhor
+                    suas necessidades.
+                    Aqui, sua voz é ouvida — compartilhe suas ideias, dúvidas ou opiniões e enriqueça ainda mais esta conversa.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="comentario">
+            <div class="comentario-conteudo">
+                <h2 class="subtitle-comentario">Adicione seu Comentário</h2> 
+                
+                <form class="Campos" id="formulario-comentario">
+                    
+                    <div class="input-container with-icon">
+                        <div class="input-field-group"> 
+                            <img src="img/usuario.png" alt="nome" class="input-icon"/>
+                            <input type="text" id="nome" placeholder="Seu nome"/>
+                        </div>
+                        <small id="textNome"></small>
+                    </div>
+                    
+                    <div class="input-container with-icon">
+                        <div class="input-field-group">
+                            <img src="img/balon-icon.png" alt="Ícone de comentário" class="input-icon"/>
+                            <input type="text" id="comente" placeholder="Comente aqui..."/>
+                        </div>
+                        <small id="textComente"></small>
+                    </div>
+                
+                    <div class="avaliacao">
+                        <ul class="estrelas">
+                            <li class="star-icon" data-avaliação="1"></li> 
+                            <li class="star-icon" data-avaliação="2"></li> 
+                            <li class="star-icon" data-avaliação="3"></li>
+                            <li class="star-icon" data-avaliação="4"></li>
+                            <li class="star-icon" data-avaliação="5"></li> 
+                        </ul>
+                        <div class="c3"></div>
+                        <p class="feedback-text">Seu feedback sobre o SIME</p>
+                    </div>
+                    
+                    <small id="textForm" style="color: #fff; margin-top: 1vh; display: block;"></small>
+                    
+                    <button class="linear-gradient-btn" type="submit">ENVIAR</button>
+                    <div class="c2"></div>
+                </form>
+                
+            </div> 
+            <div class="computador">
+                <img src="img/computador.png">
+            </div>
+        </div>
+        
+        <section class="feedbacks">
+            <div class="comentarios-existentes" id="comentarios-lista"> 
+                <section class="paginate">
+                    <div class="pagination">
+                        <div class="first">
+                            <div class="c4"></div>
+                            <span>&#171;</span>
+                        </div>
+                        <div class="prev">
+                            <div class="c5"></div>
+                            <span>&lt;</span>
+                        </div>
+                        <div class="numbers">
+                            <div>Página 1</div>
+                        </div>
+                        <div class="next">
+                            <div class="c6"></div>
+                            <span>&gt;</span>
+                        </div>
+                        <div class="last">
+                            <div class="c7"></div>
+                            <span>&#187;</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+    </main>
+    
+    <hr>
+    
+    <footer>
+        <div class="info">
+            <ul class="footer-list">
+                <li class="footer-title">NEWO AGRADECE</li>
+                <li class="footer-subtitle">SIME</li>
+                <li class="footer-subtitle">Preços</li>
+            </ul>
+            <img src="img/logo.png" width="180px">
+
+        </div>
+        <div class="contact-icons">
+            <img src="img/IG.png">
+            <img src="img/gmail.png">
+            <img src="img/github.png">
+        </div>
+    </footer>
+    
+    <script src="js/comente.js"></script>
+</body>
+</html>

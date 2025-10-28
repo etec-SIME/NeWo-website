@@ -846,7 +846,7 @@ footer{
         border: 1px solid #6D00A0;
         aspect-ratio: 1 / 1;
         width: 100%;      /* ocupa toda a coluna do grid */
-        height: auto;
+        height: 96%;
     }
 
     .benefits-container {
@@ -989,6 +989,11 @@ label {
     max-width: 100vw;
 }
 
+.scope-text {
+    font-size: 1.9rem;
+    max-width: 76%;
+}
+
 }
 
 
@@ -1038,7 +1043,7 @@ label {
 
         .scope-container {
         display: flex;
-        height: 130vh;
+        height: 120vh;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
@@ -1084,6 +1089,22 @@ label {
     filter: blur(6vw);
     }
 
+    .scope-card {
+        width: 95%;
+        height: 90%;
+    }
 
+    .mission-icon, .vision-icon, .values-icon {
+        margin-top: 15px;
+    }
+
+    .scope-title-card {
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .scope-text {
+        max-width: 80%;
+    }
 }
 

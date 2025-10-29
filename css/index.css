@@ -56,12 +56,134 @@ li{
     font-style: normal;
 }
 
+.menu-list li a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav-comment a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.menu-nav ul li a:active {
+    color: #A55FE6;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.menu-nav ul li a.menu-ativo {
+    color: #A55FE6;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    border-bottom: clamp(0.1vw, 0.14vw, 2px) solid #A55FE6;
+    padding-bottom: clamp(0.2vw, 0.34vw, 5px);
+}
+
 .nav-comment p{
     color: #ffffff;
     margin-top: 18px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+}
+
+/*=======================MENU MOBILE================================*/
+
+.hamburger-icon {
+    width: 1vw;
+    height: 1vw;
+    display: none;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 50vw; 
+    max-width: 280px;
+    height: 100vh;
+    background-color: #141619; 
+    z-index: 10000;
+    padding: 3vw 2vw;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0.2vw 0 1vw rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column; 
+}
+
+.menu-mobile.open {
+    right: 0; 
+}
+
+.menu-mobile .fechar {
+    position: absolute;
+    top: 10vw;
+    right: 10vw;
+    width: 3vw;
+    height: 3vw;
+    max-width: 30px; 
+    max-height: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    color: #FFFFFF; 
+}
+
+.menu-mobile .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%; 
+    padding: 0;
+    margin-top: 25vw;
+}
+
+.menu-mobile .menu-list li {
+    width: 100%;
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    padding: 1.5vw 2vw;
+    margin-bottom: 8vw;
+}
+
+.menu-mobile .menu-list li img {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 2vw;
+}
+
+.menu-mobile .menu-list li a {
+    color: #FFFFFF; 
+    font-size: clamp(2vw, 3vw, 28px);
+    font-weight: 300;
+    margin-left: 0; 
+    flex-grow: 1;
+}
+
+.menu-mobile .menu-list li a.menu-ativo {
+    color: #A55FE6; 
+    font-weight: 600; 
+    background-color: transparent;
+    border-bottom: none; 
+    padding-bottom: 0;
+}
+
+.menu-mobile .menu-list li:has(a.menu-ativo) img {
+    filter: invert(40%) sepia(80%) saturate(2000%) hue-rotate(260deg) brightness(120%);
+}
+
+.menu-mobile .menu-list li:has(a.menu-ativo)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.4vw;
+    height: 100%;
+    background-color: #A55FE6; 
+    border-radius: 0 0.5vw 0.5vw 0; 
 }
 
 /*INTRODUÇÃO*/
@@ -92,6 +214,8 @@ li{
     -webkit-text-fill-color: transparent;
     list-style: none;
 }
+
+
 
 .subtitle{
     font-weight: 500;
@@ -125,8 +249,22 @@ li{
     border-radius: 3px;
     border: none;
     text-wrap: nowrap;
+    cursor: pointer;
 }
 
+.linear-gradient-btn a{
+    margin-top: 2rem ;
+    margin-bottom: 20rem;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 3px;
+    border: none;
+    text-wrap: nowrap;
+    outline-style: none;
+    text-decoration: none;
+}
 
 /*NOSSOS OBJETIVOS*/
 .scope-container{
@@ -631,7 +769,6 @@ footer{
 }
 .contact-icons img{
     width: 3rem;
-    margin-top: 4%;
     margin-right: 2rem;
 }
 
@@ -770,7 +907,7 @@ footer{
 
 
 /*MOBILE L*/
-@media (max-width: 428px){
+@media screen and (max-width: 428px){
 
     html{font-size: 45%;}
 
@@ -781,13 +918,21 @@ footer{
         margin-top: 3rem;
     }
 
-    #nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* font-size: 1.4rem; */
-}
+    .nav-menu,
+    .nav-comment {
+        display: none; 
+    }
+
+.hamburger-icon{
+        display: block;
+        height: 5vw;
+        width: 6vw;
+        margin-right: 3vw;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
 .introduction-text{
     max-width: 370px;
 }
@@ -824,7 +969,7 @@ footer{
 
     .scope-container {
         display: flex;
-        height: 140vh;
+        height: 130vh;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
@@ -994,6 +1139,15 @@ label {
     max-width: 76%;
 }
 
+.menu-mobile .menu-list li {
+    width: 100%;
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    padding: 1.5vw 2vw;
+    margin-bottom: 6vw;
+}
+
 }
 
 
@@ -1043,7 +1197,7 @@ label {
 
         .scope-container {
         display: flex;
-        height: 120vh;
+        height: 110vh;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
@@ -1106,5 +1260,27 @@ label {
     .scope-text {
         max-width: 80%;
     }
+
+
+
 }
 
+@media screen and (max-width: 344px){
+    .scope-card {
+        width: 115%;
+        height: 90%;
+    }
+
+    .mission-icon, .vision-icon, .values-icon {
+        margin-top: 15px;
+    }
+
+    .scope-title-card {
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .scope-text {
+        max-width: 80%;
+    }
+}

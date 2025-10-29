@@ -14,17 +14,31 @@
                 <div class="logo"> 
                     <img src="img/logo.png" width="190px">
                 </div>
-                <div class="menu-nav">
+                <div class="nav-menu">
                     <ul class="menu-list">
-                        <li>HOME</li>
-                        <li>SIME</li>
-                        <li>NOSSOS PREÇOS</li>
-                        <li>CONTATO</li>
+                        <li><a href="index.html">HOME</a></li> 
+                        <li><a href="sime.html" class="menu-ativo">SIME</a></li> 
+                        <li><a href="preco.html">NOSSOS PREÇOS</a></li>
+                        <li><a href="contato.html">CONTATO</a></li> 
                     </ul>
                 </div>
                 <div class="nav-comment">
-                    <p>COMENTE</p>
+                    <p><a href="comente.html">COMENTE</a></p>
                 </div>
+
+                <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
+
+            <div class="menu-mobile">
+                <img src="img/fechar.png" class="fechar">
+                <ul class="menu-list">
+                    <li><img src="img/home.png"><a href="index.html">HOME</a></li>
+                    <li><img src="img/engrenagem.png" class="sime"><a href="sime.html" class="menu-ativo">SIME</a></li>
+                    <li><img src="img/dinheiro.png"><a href="preco.html" >NOSSOS PREÇOS</a></li>
+                    <li><img src="img/phone.png"><a href="contato.html">CONTATO</a></li>
+                    <li><img src="img/comente.png"><a href="comente.html">COMENTE</a></li>
+                </ul>
+            </div>
+            
             </nav>
     </Header>
     <main>
@@ -151,7 +165,7 @@
         <img class="verify-values-icon-coin" src="img/coin.png" alt="">
         </div>
     
-        <button class="verify-values-linear-gradient-btn">VERIFICAR</button>
+        <button class="verify-values-linear-gradient-btn"><a href="preco.html">VERIFICAR</a></button>
     </div>
 </div>
 </main>
@@ -170,8 +184,10 @@
             <div class="contact-icons">
                 <img src="img/IG.png">
                 <img src="img/gmail.png">
-                <img src="img/github.png">
+                <a href="https://github.com/etec-SIME"><img src="img/github.png"></a>
             </div>
         </footer> 
+
+    <script src="js/sime.js"></script>
 </body>
 </html>

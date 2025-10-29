@@ -17,15 +17,28 @@
                 </div>
                 <div class="nav-menu">
                     <ul class="menu-list">
-                        <li>HOME</li>
-                        <li>SIME</li>
-                        <li><a href="preco.html" class="menu-ativo">NOSSOS PREÇOS</a></li>
-                        <li>CONTATO</li>
+                        <li><a href="index.html" class="menu-ativo">HOME</a></li> 
+                        <li><a href="sime.html">SIME</a></li> 
+                        <li><a href="preco.html">NOSSOS PREÇOS</a></li>
+                        <li><a href="contato.html">CONTATO</a></li> 
                     </ul>
                 </div>
                 <div class="nav-comment">
-                    <p>COMENTE</p>
+                    <p ><a href="comente.html">COMENTE</a></p>
                 </div>
+
+                <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
+
+            <div class="menu-mobile">
+                <img src="img/fechar.png" class="fechar">
+                <ul class="menu-list">
+                    <li><img src="img/home.png"><a href="index.html" class="menu-ativo">HOME</a></li>
+                    <li><img src="img/engrenagem.png" class="sime"><a href="sime.html">SIME</a></li>
+                    <li><img src="img/dinheiro.png"><a href="preco.html" >NOSSOS PREÇOS</a></li>
+                    <li><img src="img/phone.png"><a href="contato.html">CONTATO</a></li>
+                    <li><img src="img/comente.png"><a href="comente.html">COMENTE</a></li>
+                </ul>
+            </div>
             </nav>
 
         </Header>
@@ -50,7 +63,7 @@
                     melhorar seu desempenho em realizar tarefas que antes seriam
                     difíceis.</div>
                 </ul>
-                <button class="linear-gradient-btn">LER SOBRE</button>
+                <button class="linear-gradient-btn"><a href="#sobre-nos">LER SOBRE</a></button>
             </div>
 
             <!--NOSSO OBJETIVOS-->
@@ -84,7 +97,8 @@
             </div>
 
             <!--SOBRE NÓS-->
-        <div class="about-container">
+        <section id="sobre-nos">
+            <div class="about-container">
             <div class="about-us-container">
                 <p class="about-us-title" >Sobre Nós</p>
                 <p class="about-us-text">Somos a NeWo, uma empresa que cria softwares para escolas técnicas de todo o Brasil. Nosso objetivo é facilitar o dia a dia de quem trabalha com educação, oferecendo sistemas práticos, modernos e confiáveis.</p>
@@ -113,6 +127,8 @@
                 </div >
 
             </div>
+        </section>
+        
 
             <div class="collaborators-container">
                 <p class="collaborators-title">Nossos colaboradores</p>
@@ -193,7 +209,9 @@
             <div class="contact-icons">
                 <img src="img/IG.png">
                 <img src="img/gmail.png">
-                <img src="img/github.png">
+                <a href="https://github.com/etec-SIME"><img src="img/github.png"></a>
             </div>
         </footer> 
+
+        <script src="js/index.js"></script>
 </body>

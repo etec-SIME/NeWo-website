@@ -1455,6 +1455,8 @@ hr {
         align-items: center;
         margin-left: 29vw !important;
         font-size: 2.5vw !important;
+        margin-top: 4vw !important;
+        margin-bottom: 3vw;
     }
 
     .avaliacao{
@@ -1482,7 +1484,7 @@ hr {
 
     .feedback-text{
         font-size:clamp(2vw, 2.5vw, 46px) !important;
-        margin-left:clamp(30vw, 33vw, 400px) !important;
+        margin-left:clamp(30vw, 35vw, 400px) !important;
         width:clamp(15vw, 34vw,300px);
         margin-top: -5.6vw !important;
     }
@@ -1707,21 +1709,12 @@ hr {
         left: -4vw;
     }
 
-    .avaliacao{
-        margin-top:clamp(0.7vw, 1.042vw,20px);
-        margin-bottom:clamp(0.7vw, 1.042vw,20px);
-        width:clamp(60vw, 70vw, 800px);
-        flex-direction: column; 
-        align-items: flex-start;
-        margin-left: -2vw !important;
-    }
-
     .linear-gradient-btn {
         width: 25vw;
         height: 6.3vw;
         font-size: 2vw;
         max-height: 30vw;
-        margin-left: 20vw;
+        margin-left: 16vw;
     }
 
     #textContent, #textNome, #textComente{
@@ -1731,12 +1724,24 @@ hr {
         margin-left: 2vw;
     }
 
-    #textContent, #textForm{
-        width: 60vw;
-        align-items: center;
-        text-align: center;
-        margin-left: 1vw !important;
-        font-size: 2vw;
+    #textContent ,#textForm{
+        font-size: 2.5vw !important;
+        width: 100%;
+        margin-left: 6vw !important;
+        margin-top: 4vw !important;
+        margin-bottom: 3vw;
+    }
+
+    .avaliacao {
+        width: 80%;
+        margin-left: -1vw !important; 
+        margin: 0;
+        gap: 2vw;
+    }
+
+    .feedback-text{
+        margin-left: 33vw !important;
+        margin-top: -7vw !important;
     }
 
     #comentarios-lista{
@@ -1822,19 +1827,20 @@ hr {
     #textContent ,#textForm{
         font-size: 2.7vw !important;
         width: 70%;
-        margin-left: 15vw;
+        margin-left: 6vw !important;
+        margin-bottom: 4vw;
     }
 
     .avaliacao {
         width: 80%;
         margin-left: 6vw !important; 
         margin: 0;
-        gap: 2vw;
+        gap: 4vw;
     }
 
     .feedback-text{
         margin-right: 1vw;
-        margin-top: -7.2vw !important;
+        margin-top: -9vw !important;
     }
 }
 
@@ -1853,15 +1859,31 @@ hr {
         width: 70vw;
     }
 
-    .avaliacao {
-        width: 80%;
-        margin-left: 15vw !important; 
-        margin: 0;
-        gap: 2vw;
+    #textContent ,#textForm{
+        font-size: 2.7vw !important;
+        width: 70%;
+        margin-left: 21vw !important;
+        margin-bottom: 4vw;
     }
 
-    .linear-gradient-btn{
-        margin-top: 1vw;
-        margin-left: 36vw;
+    .avaliacao {
+        width: 80%;
+        margin-left: 12vw !important; 
+        margin: 0;
+        gap: 4vw;
+    }
+
+    .feedback-text{
+        margin-left: 1vw;
+        margin-top: -9vw !important;
+    }
+
+    .linear-gradient-btn {
+        width: 32vw !important; 
+        height: 8vw !important; 
+        font-size: 2.2vw !important;
+        max-height: 30vw;
+        margin-top: -6vw;
+        margin-left: 38vw !important;
     }
 }

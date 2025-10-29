@@ -762,6 +762,26 @@ footer{
     margin-right: 2rem;
 }
 
+/*=======================@MEDIAS================================*/
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+
+    .logo{
+        margin-left: clamp(2vw, 5.3vw, 80px); 
+        margin-top: clamp(0.2vw, 0.5vw, 15px); 
+    }
+    
+    .menu-nav {
+        margin-right: clamp(2vw, 5vw, 70px); 
+    }
+
+    .circulo{
+        width: clamp(0.8vw, 1.3vw, 18px);
+        height: clamp(0.8vw, 1.3vw, 18px);
+        right: clamp(4vw, 10.6vw, 175px); 
+        top: clamp(1vw, 4.4vw, 110px);
+    }
+}
+
 
 /*MOBILE L*/
 @media (max-width: 428px){

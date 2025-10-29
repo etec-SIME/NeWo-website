@@ -606,9 +606,56 @@ hr {
     .card {
         border-radius: clamp(0.2vw, 0.34vw, 5px);
         width: clamp(18vw, 22vw, 320px); 
-        height: clamp(28vw, 40vw, 600px); 
+        height: clamp(28vw, 50vw, 600px); 
         padding: clamp(1.5vw, 2.1vw, 30px); 
+    }
 
+    .card img{
+        margin-top: 0.6vw; 
+        width: 2.7vw; 
+        height: 2.7vw; 
+    }
+
+    .imagemdinheiro {
+        width: 2.7vw; 
+        height: 2.7vw; 
+    }
+
+    .card-title {
+        font-size: 1.5vw; 
+        margin-top: 2.2vw; 
+    }
+
+    .card-description {
+        font-size: 0.9vw; 
+        margin-top: 1.8vw; 
+    }
+
+    .feature-item img {
+        width: 1.4vw; 
+        height: 1.4vw; 
+        margin-right: 0.4vw; 
+    } 
+
+    .feature-item p {
+        font-size: 0.9vw; 
+    }
+
+    .price {
+        font-size: vw; 
+        margin-top: 2.2vw; 
+    }
+
+    .price-per-month {
+        font-size: 1vw; 
+    }
+
+    .card-features {
+        margin-top: 2.5vw; 
+    }
+    
+    .feature-item {
+        margin-bottom: 1.5vw; 
     }
 
     /*.input-icon {
@@ -621,8 +668,27 @@ hr {
     .circulo{
         width: clamp(0.8vw, 1.3vw, 18px);
         height: clamp(0.8vw, 1.3vw, 18px);
-        right: 9vw; 
-        top: clamp(1vw, 3.5vw, 110px);
+        right: clamp(4vw, 10.6vw, 175px); 
+        top: clamp(1vw, 4.4vw, 110px);
+    }
+
+    .buy-button {
+        margin-top: auto;
+        width: clamp(7vw, 9vw, 140px); 
+        height: clamp(2vw, 3vw, 40px); 
+        margin-top: clamp(1vw, 1.5vw, 40px);
+        margin-bottom: clamp(0.8vw, 1vw, 20px); 
+        background: linear-gradient(135deg, #AE8DCD 0%, #A55FE6 44.76%, #571891 100%);
+        border-radius: clamp(0.1vw, 0.14vw, 2px);
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: clamp(0.6vw, 0.85vw, 14px); 
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        border: none;
     }
     
 }

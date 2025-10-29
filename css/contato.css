@@ -565,7 +565,7 @@ hr {
 }
 
 /*=======================@MEDIAS================================*/
-/*@media screen and (max-width: 1920px) and (max-height: 1080px) {
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
 
     .logo{
         margin-left: clamp(2vw, 5.3vw, 80px); 
@@ -579,15 +579,15 @@ hr {
     .circulo{
         width: clamp(0.8vw, 1.3vw, 18px);
         height: clamp(0.8vw, 1.3vw, 18px);
-        right: clamp(4vw, 10vw, 175px); 
-        top: clamp(1vw, 3.4vw, 110px);
+        right: clamp(4vw, 10.6vw, 175px); 
+        top: clamp(1vw, 4.4vw, 110px);
     }
 
     .imagem img {
-        width: clamp(20.833vw, 45vw, 800px);
-        height: clamp(20.833vw, 45vw, 800px);
+        width: clamp(20.833vw, 430vw, 600px);
+        height: clamp(20.833vw, 45vw, 600px);
         margin-top: -25vw;
-        margin-left: clamp(5.208vw, 70vw, 750px);
+        margin-left: clamp(5.208vw, 40vw, 600px);
     }
 
     .comentario .livros img{
@@ -603,7 +603,7 @@ hr {
         margin-bottom: clamp(0.5vw, 1.2vw, 20px);
         font-weight: 500;
         text-align:right;
-        margin-left: 23vw;
+        margin-left: 28.2vw;
     }
 
     .comentario-conteudo li{
@@ -613,7 +613,7 @@ hr {
         list-style:none;
         margin-bottom: clamp(1vw, 1.8vw, 28px);
         text-align:right;
-        margin-left: 2.6vw;
+        margin-left: 5.1vw;
     }
 
     .input-container input,
@@ -624,10 +624,10 @@ hr {
     .input-icon {
         position: absolute;
         left: clamp(0.7vw, 1vw, 15px);
-        top: 1.5vw;
+        top: 2vw;
         transform: translateY(-50%);
-        width: clamp(0.9vw, 5vw, 30px);
-        height: clamp(0.9vw, 5vw, 30px);
+        width: clamp(0.9vw, 4vw, 24px);
+        height: clamp(0.9vw, 4vw, 24px);
         z-index: 10;
     }
 
@@ -655,7 +655,7 @@ hr {
         margin-left: 28vw;
     }
 
-}*/
+}
 
 @media screen and (max-width: 1280px) and (max-height: 800px) {
     .logo{

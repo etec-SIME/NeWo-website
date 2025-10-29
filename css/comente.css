@@ -690,6 +690,11 @@ hr {
         margin-left: clamp(2vw, 5.3vw, 80px); 
         margin-top: clamp(0.2vw, 0.5vw, 15px); 
     }
+
+    .subtitle {
+        margin-left:clamp(5.208vw, 10vw, 600px);
+        margin-bottom: clamp(0.521vw, 1.042vw, 30px);
+    }
     
     .menu-nav {
         margin-right: clamp(2vw, 5vw, 70px); 
@@ -698,8 +703,8 @@ hr {
     .circulo{
         width: clamp(0.8vw, 1.3vw, 18px);
         height: clamp(0.8vw, 1.3vw, 18px);
-        right: clamp(4vw, 10vw, 175px); 
-        top: clamp(1vw, 3.4vw, 110px);
+        right: clamp(4vw, 10.6vw, 175px); 
+        top: clamp(1vw, 4.4vw, 110px);
     }
 
     .c3{

@@ -93,6 +93,9 @@ a {
     font-style: normal;
 }
 
+.comment p a:visited{
+    color: #ffffff;
+}
 
 .hamburger-icon {
     width: 1vw;
@@ -219,6 +222,10 @@ a {
     text-align: center;
     font-size: clamp(1vw, 1.35vw, 24px);
     line-height: 1.5;
+}
+
+.introduction-text-mobile{
+    display: none;
 }
 
 /*=======================PREÇO================================*/
@@ -604,12 +611,12 @@ hr {
 
     }
 
-    .input-icon {
+    /*.input-icon {
         left: clamp(0.5vw, 1.02vw, 15px);
         top: 1.4vw;
         width: clamp(0.8vw, 2vw, 20px);
         height: clamp(0.8vw, 3.9vw, 20px);
-    }
+    }*/
 
     .circulo{
         width: clamp(0.8vw, 1.3vw, 18px);
@@ -617,8 +624,6 @@ hr {
         right: 9vw; 
         top: clamp(1vw, 3.5vw, 110px);
     }
-
-
     
 }
 
@@ -1045,7 +1050,7 @@ hr {
 
 @media screen and (max-width: 780px) {
     .circulo{
-        top: clamp(1vw, 9vw, 110px);
+        top: clamp(1vw, 9.4vw, 110px);
     }
 }
 
@@ -1055,7 +1060,7 @@ hr {
     .logo img{
         margin-left: clamp(0.5vw, 5vw, 32px);
         margin-top: clamp(0.5vw, 5vw, 32px);
-        width: 115px; 
+        width: 130px; 
     }
 
     .menu-nav,
@@ -1067,7 +1072,7 @@ hr {
         display: block;
         height: 5vw;
         width: 6vw;
-        margin-right: 3vw;
+        margin-right: 9vw;
     }
 
     .menu-mobile {
@@ -1075,44 +1080,60 @@ hr {
     }
 
     .subtitle {
-        font-size: 6vw;
+        font-size: 8vw;
         text-align: center;
     }
 
-    .introduction-text {
-        font-size: 2.4vw;
-        margin-top: 2.1vw;
+    .introduction-text{
+        display: none;
     }
 
-    .cards-section h2, .form-section h2 {
-        font-size: 4.8vw;
+    .introduction-text-mobile {
+        display: flex;
+        margin-top: clamp(3vw, 4vw, 50px);
+        font-weight: 300;
+        color: #E5E5E5;
+        text-align: center;
+        font-size: clamp(1vw, 3vw, 30px);
+        line-height: 1.5;
+        width: 75vw;
+        align-items: justify;
+    }
+
+    .cards-section h2 {
+        font-size: 6.2vw;
+    }
+
+    .form-section h2{
+        font-size: 6vw;
     }
 
     .card {
-        width: 50vw;
-        height: 85vw;
+        width: 60vw;
+        height: 110vw;
         border-radius: 1vw;
         flex-direction: column;
+        margin-left: 3vw;
     }
 
     .card img{
         margin-top: 0.7vw;
-        width: 6vw;
-        height: 6vw;
+        width: 8.4vw;
+        height: 8.4vw;
     }
 
     .imagemdinheiro {
-        width: 5vw;
-        height: 5vw;
+        width: 8vw;
+        height: 8vw;
     }
 
     .card-title {
         font-weight: 500;
-        font-size: 3vw;
+        font-size: 4vw;
         height: 7vw;
         line-height: 1.4;
         text-align: left;
-        margin-top: 3.5vw; 
+        margin-top: 5vw; 
         background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1120,48 +1141,48 @@ hr {
     }
 
     .card-description {
-        font-size: 2.1vw;
+        font-size: 2.9vw;
         line-height: 1.4;
         text-align: left;
         margin-bottom: 3vw; 
     }
 
     .feature-item img {
-        width: 2.7vw;
-        height: 2.7vw;
+        width: 4vw;
+        height: 4vw;
         margin-right: 0.5vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
     }   
 
     .feature-item p {
-        font-size: 2.1vw;
-        margin-top: 1.8vw;
+        font-size: 2.7vw;
+        margin-top: 2.9vw;
         padding: 0.8vw;
     }
 
     .price {
-        font-size: 4vw;
+        font-size: 6vw;
         margin-top: 0vw;
     }
 
     .price-per-month {
-        font-size: 1.7vw;
+        font-size: 2.7vw;
         margin-left: 1vw;
         margin-top: -3vw;
     }
 
     .buy-button {
-        width: 25vw; 
-        height: 6.3vw; 
-        font-size: 1.8vw;
+        width: 32vw; 
+        height: 8vw; 
+        font-size: 2.2vw;
         margin-bottom: 3vw;
-        margin-top: 2vw;
+        margin-top: 6vw;
     }
 
     .submit-button {
-        width: 25vw;
-        height: 6.3vw;
-        font-size: 2vw;
+        width: 32vw; 
+        height: 8vw; 
+        font-size: 2.2vw;
     }
 
     .Campos {
@@ -1175,24 +1196,26 @@ hr {
         margin-left: clamp(8vw, 13vw, 190px);;
         margin-top: clamp(8vw, 13vw, 190px);
         margin-bottom: clamp(3vw, 5.42vw, 80px);
-        width: 70vw;
+        width: 75vw;
+        height: 100%;
     }
 
     .form-section h3{
-        font-size: clamp(1vw, 2.2vw, 24px);
+        font-size: clamp(1vw, 2.6vw, 24px);
         line-height: clamp(1.5vw, 3vw, 36px);
         margin-top: 1vw;
         align-items: center;
         z-index: 4;
+        font-weight: 500;
     }
 
     .input-icon {
         position: absolute;
         left: clamp(0.5vw, 2vw, 15px);
-        top: clamp(1.9vw, 3.7vw, 15px);
+        top: clamp(1.9vw, 5vw, 40px);
         transform: translateY(-50%);
-        width: clamp(0.8vw, 4vw, 20px);
-        height: clamp(0.8vw, 4vw, 20px);
+        width: clamp(0.8vw, 5vw, 20px);
+        height: clamp(0.8vw, 5vw, 20px);
         margin-top: 0.4vw;
     }
 
@@ -1201,16 +1224,23 @@ hr {
         border: clamp(0.05vw, 0.07vw, 1px) solid #B784E7;
         border-radius: clamp(0.2vw, 1vw, 5px);
         width: 100%; 
-        padding: clamp(0.1vw, 3.5vw, 16px); 
-        font-size: clamp(0.8vw, 1.08vw, 18px);
+        padding: clamp(3vw, 3.8vw, 40px) ;
+        font-size: clamp(2vw, 2.9vw, 30px);
     }
 
     .input-container ::placeholder {
-        font-size: clamp(1vw, 2vw, 24px);
+        font-size: clamp(1vw, 2.9vw, 24px);
     }
 
     .input-container.with-icon input {
-        padding-left: clamp(2vw, 7.3vw, 45px);
+        padding-left: clamp(2vw, 9vw, 45px);
+    }
+
+    #textContent, #textNome, #textEscola, #textEmail, #textTelefone, #textCargo, #textForm{
+        font-size: 2.6vw;
+        width: 72vw;
+        text-align: justify;
+        margin-left: 1.6vw;
     }
 
     .circulo{
@@ -1268,9 +1298,10 @@ hr {
     }
 
     .info img {
-        width: 22%; 
-        height: 22%;
-        margin-bottom: 5vw;
+        width: 31%; 
+        height: 31%;
+        margin-top: 1vw;;
+        margin-bottom: 4vw;
     }
 
     .footer-list {
@@ -1280,74 +1311,23 @@ hr {
     }
 
     .footer-title {
-        font-size: clamp(0.8vw, 1.8vw, 20px);
-        margin-top: clamp(1vw, 5vw, 24px);
+        font-size: clamp(0.8vw, 2.5vw, 20px);
+        margin-top: clamp(1vw, 1.5vw, 24px);
         margin-left: clamp(1.5vw, 3vw, 32px); 
     }
 
     .footer-subtitle {
         margin-left: clamp(1.5vw, 3vw, 32px); 
-        font-size: clamp(0.7vw, 1.5vw, 18px);
+        font-size: clamp(0.7vw, 2.3vw, 18px);
         margin-top: clamp(0.5vw, 1vw, 16px);
         display: block;
         text-align: left; 
     }
 
     .contact-icons img {
-        width: clamp(1.2vw, 3vw, 28px);
+        width: clamp(1.2vw, 4.7vw, 28px);
         margin-bottom: clamp(0.5vw, 50vw, 12px);
         margin-right: clamp(1.5vw, 2.17vw, 32px);
     }
 
-}
-
-@media screen and (max-width: 540px) and (max-height: 720px) { 
-    .hamburger-icon {
-        width: 3vw;
-        height: 3vw;
-    }
-
-    .menu-mobile .menu-list {
-        width: 100%; 
-        padding: 0;
-        margin-top: 15vw;
-    }
-
-    .menu-mobile .menu-list li {
-        width: 100%;
-        padding: 1.5vw 2vw;
-        margin-bottom: 10vw;
-    }
-
-    .menu-mobile .fechar {
-        top: 10vw;
-        right: 10vw;
-        width: 2.5vw;
-        height: 2.5vw;
-        max-width: 30px; 
-        max-height: 30px; 
-    }
-
-    .menu-mobile .menu-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; 
-        width: 100%; 
-        padding: 0;
-        margin-top: 18vw;
-    }
-
-    .menu-mobile .menu-list li img {
-        width: 3.5vw;
-        height: 3.5vw;
-        margin-right: 2vw;
-    }
-
-    .menu-mobile .menu-list li a {
-        color: #FFFFFF; 
-        font-size: 2.5vw;
-        font-weight: 300;
-        margin-left: 0; 
-        flex-grow: 1;
-    }
 }

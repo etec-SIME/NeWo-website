@@ -1,3 +1,16 @@
+const CARACTERES_PERMITIDOS = {
+  LETRAS_E_DIGITOS: 'a-zA-Z0-9',
+  ACENTOS: 'ÁÀÂÃÄÉÊËÍÎÏÓÔÕÖÚÜÛáàâãäéêëíîïóôõöúüûçÇ',
+  ESPACO: '\\s',
+  PONTUACAO: '.,:;?!\\-—–\'"“”( )[\\]{}<>/\\\\|@#$%^&*+=~`',
+};
+
+const CARACTERES_TOTAIS = 
+  CARACTERES_PERMITIDOS.LETRAS_E_DIGITOS +
+  CARACTERES_PERMITIDOS.ACENTOS +
+  CARACTERES_PERMITIDOS.ESPACO +
+  CARACTERES_PERMITIDOS.PONTUACAO;
+
 let nome = document.getElementById('nome');
 let comente = document.getElementById('comente');
 let form = document.getElementById('formulario-comentario'); 
@@ -247,29 +260,19 @@ function criarNovoComentario(nomeAutor, textoComentario, rating) {
     update(); 
 }
 
-nome.addEventListener("keyup", () => {
-    if(!validatorNome(nome.value)) {
-        if (textNome) textNome.textContent = "O formato do Nome deve ser Ex: abcd ou Abcd (sem caracteres especiais)."
-    } else {
-        if (textNome) textNome.textContent = " ";
-    }
-})
-
-comente.addEventListener("keyup", () => {
-    if(!validatorComente(comente.value)) {
-       if (textComente) textComente.textContent = "Seu comentário só pode conter letras, números, espaços, hífens, pontos ou vírgulas."
-    } else {
-        if (textComente) textComente.textContent = " ";
-    }
-})
-
 function validatorNome(nome){
-    let namePattern = /^[a-zA-Z0-9\s-.,]+$/; 
+    let namePattern = new RegExp('^[' + CARACTERES_TOTAIS + ']+$');
     return namePattern.test(nome);
 }
 
 function validatorComente(comente){
-    let comentePattern = /^[a-zA-Z0-9\s-.,]+$/; 
+    const COMENTARIO_PERMITIDOS = 
+        CARACTERES_PERMITIDOS.LETRAS_E_DIGITOS +
+        CARACTERES_PERMITIDOS.ACENTOS +
+        CARACTERES_PERMITIDOS.ESPACO +
+        '.,:;?!\\-'; 
+
+    let comentePattern = new RegExp('^[' + COMENTARIO_PERMITIDOS + ']+$');
     return comentePattern.test(comente);
 }
 
@@ -279,4 +282,4 @@ function init(){
     update();
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener

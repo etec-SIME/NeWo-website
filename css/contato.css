@@ -587,7 +587,7 @@ hr {
         width: clamp(20.833vw, 430vw, 600px);
         height: clamp(20.833vw, 45vw, 600px);
         margin-top: -25vw;
-        margin-left: clamp(5.208vw, 40vw, 600px);
+        margin-left: clamp(5.208vw, 36vw, 570px);
     }
 
     .comentario .livros img{
@@ -618,7 +618,7 @@ hr {
 
     .input-container input,
     .input-container textarea {
-        padding-left: clamp(2vw, 3vw, 60px); 
+        padding-left: clamp(2vw, 4vw, 60px); 
     }
 
     .input-icon {
@@ -633,7 +633,7 @@ hr {
 
     .input-container.with-icon textarea.mensagem {
         height: clamp(9.5vw, 12vw, 130px);
-        padding-left: clamp(2vw, 3vw, 60px); 
+        padding-left: clamp(2vw, 4vw, 60px); 
     }
 
     .input-container ::placeholder {
@@ -655,6 +655,16 @@ hr {
         margin-left: 28vw;
     }
 
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    .introduction-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+        margin-left: 7vw;
+    }
 }
 
 @media screen and (max-width: 1280px) and (max-height: 800px) {

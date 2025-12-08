@@ -995,7 +995,7 @@ hr {
     }
 
     .hamburger-icon{
-        display: block;
+        display: flex;
         height: 5vw;
         width: 6vw;
         margin-right: 9vw;

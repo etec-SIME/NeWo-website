@@ -2,7 +2,7 @@
 
 /*=======================GERAL================================*/
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -257,7 +257,6 @@ a {
 }
 
 .card img {
-    
     margin-top: clamp(0.8vw, 1.2vw, 18px); 
     width: clamp(1.8vw, 2.5vw, 38px); 
     height: clamp(1.8vw, 2.5vw, 38px); 
@@ -308,7 +307,6 @@ a {
 .price {
     font-weight: 400;
     font-size: clamp(1.2vw, 1.8vw, 32px); 
-    
     margin-top: clamp(0.6vw, 1.0vw, 15px); 
     background: linear-gradient(180deg, #AE8DCD 0%, #A55FE6 50%, #6D00A0 100%);
     -webkit-background-clip: text;
@@ -327,7 +325,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
     margin-top: clamp(1.5vw, 2.2vw, 30px); 
     padding-left: 0;
 }
@@ -335,7 +332,6 @@ a {
 .feature-item {
     display: flex;
     align-items: center;
-    
     margin-bottom: clamp(0.8vw, 1.4vw, 20px); 
 }
 
@@ -383,7 +379,7 @@ a {
     margin-bottom: clamp(3vw, 5.42vw, 80px);
 }
 
- .form-section h2 {
+.form-section h2 {
     font-weight: 500;
     font-size: clamp(2vw, 3.79vw, 54px);
     line-height: clamp(3vw, 5.3vw, 78px);

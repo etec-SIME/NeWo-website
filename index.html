@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>HOME - NeWo</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-<div class="main-container">
-        <Header>
+    <div class="main-container">
+        <header>
             <nav id="nav">
-                <div class="nav-logo-sime"> 
-                    <a href="index.html" class="menu-ativo"><img src="img/logo.png" width="190px"></a>
+                <div class="logo"> 
+                    <a href="index.html"><img src="img/logo.png" width="190px"></a>
                 </div>
-                <div class="nav-menu">
+                <div class="menu-nav">
                     <ul class="menu-list">
                         <li><a href="index.html" class="menu-ativo">HOME</a></li> 
                         <li><a href="sime.html">SIME</a></li> 
@@ -23,28 +23,29 @@
                         <li><a href="contato.html">CONTATO</a></li> 
                     </ul>
                 </div>
-                <div class="nav-comment">
-                    <p ><a href="comente.html">COMENTE</a></p>
+
+                <div class="comment">
+                    <p><a href="comente.html">COMENTE</a></p>
+                    <div class="circulo"></div>
                 </div>
 
                 <img src="img/hamburger.png" class="hamburger-icon" alt="Abrir menu">
 
-            <div class="menu-mobile">
-                <img src="img/fechar.png" class="fechar">
-                <ul class="menu-list">
-                    <li><img src="img/home.png"><a href="index.html" class="menu-ativo">HOME</a></li>
-                    <li><img src="img/engrenagem.png" class="sime"><a href="sime.html">SIME</a></li>
-                    <li><img src="img/dinheiro.png"><a href="preco.html" >NOSSOS PREÇOS</a></li>
-                    <li><img src="img/phone.png"><a href="contato.html">CONTATO</a></li>
-                    <li><img src="img/comente.png"><a href="comente.html">COMENTE</a></li>
-                </ul>
-            </div>
+                <div class="menu-mobile">
+                    <img src="img/fechar.png" class="fechar">
+                    <ul class="menu-list">
+                        <li><img src="img/home.png"><a href="index.html" class="menu-ativo">HOME</a></li>
+                        <li><img src="img/engrenagem.png" class="sime"><a href="sime.html">SIME</a></li>
+                        <li><img src="img/dinheiro.png"><a href="preco.html">NOSSOS PREÇOS</a></li>
+                        <li><img src="img/phone.png"><a href="contato.html">CONTATO</a></li>
+                        <li><img src="img/comente.png"><a href="comente.html">COMENTE</a></li>
+                    </ul>
+                </div>
             </nav>
-
-        </Header>
+        </header>
 
         <main>
-
+            <!-- LUZES DE FUNDO -->
             <div class="lights-container">
                 <div class="c1"></div>
                 <div class="c2"></div>
@@ -54,164 +55,198 @@
                 <div class="c6"></div>
             </div>
             
+            <!-- INTRODUÇÃO -->
             <div class="introduction">
                 <ul class="introduction-list">
                     <li class="linear-gradient-title">NeWo</li>
                     <li class="subtitle">Nossa Empresa</li>
-                    <div class="introduction-text">Nós da NeWo somos uma empresa de softwares com o objetivo
-                    de criar sistemas para escolas técnicas de todo o Brasil, visando
-                    melhorar seu desempenho em realizar tarefas que antes seriam
-                    difíceis.</div>
+                    <li class="introduction-text">
+                        Nós da NeWo somos uma empresa de softwares com o objetivo<br> de criar sistemas para escolas técnicas de todo o Brasil, visando <br>melhorar seu desempenho em realizar tarefas que antes seriam<br> difíceis.
+                    </li>
+                    <!-- Texto Mobile -->
+                    <li class="introduction-text-mobile">
+                        Nós da NeWo somos uma empresa de softwares com o objetivo de criar sistemas para escolas técnicas de todo o Brasil.
+                    </li>
                 </ul>
                 <button class="linear-gradient-btn"><a href="#sobre-nos">LER SOBRE</a></button>
             </div>
 
-            <!--NOSSO OBJETIVOS-->
+            <!-- NOSSOS OBJETIVOS (SCOPE) -->
             <div class="scope-container">
-                <p class="scope-title">Nossos Objetivos</p>
+                <p class="section-title">Nossos Objetivos</p>
                 <div class="scope-cards">
-
                     <div class="scope-card">
-                        <img class="mission-icon" src="img/mission.png">
-                        <p class="scope-title-card">Missão</p>
+                        <img class="scope-icon" src="img/mission.png" alt="Missão">
+                        <p class="scope-card-title">Missão</p>
                         <p class="scope-text">
+                            Somos a NeWo, criamos<br> softwares práticos e confiáveis <br>para facilitar o dia a dia das<br> escolas técnicas.
+                        </p>
+                        <p class="scope-text-mobile">
                             Somos a NeWo, criamos softwares práticos e confiáveis para facilitar o dia a dia das escolas técnicas.
                         </p>
                     </div>
 
                     <div class="scope-card">
-                        <img class="vision-icon" src="img/vision.png">
-                        <p class="scope-title-card">Visão</p>
+                        <img class="scope-icon" src="img/vision.png" alt="Visão">
+                        <p class="scope-card-title" id="visão">Visão</p>
                         <p class="scope-text">
+                            Ser reconhecida até 2030 como<br> referência em soluções digitais<br> que tragam eficiência e<br> inovação às escolas.
+                        </p>
+                        <p class="scope-text-mobile">
                             Ser reconhecida até 2030 como referência em soluções digitais que tragam eficiência e inovação às escolas.
                         </p>
                     </div>
+                    
                     <div class="scope-card">
-                        <img class="values-icon" src="img/values.png">
-                        <p class="scope-title-card">Valores</p>
+                        <img class="scope-icon" src="img/values.png" alt="Valores">
+                        <p class="scope-card-title" id="valores">Valores</p>
                         <p class="scope-text">
+                            Criamos soluções modernas<br> com excelência, agilidade e<br> apoio total aos nossos clientes.
+                        </p>
+                        <p class="scope-text-mobile">
                             Criamos soluções modernas com excelência, agilidade e apoio total aos nossos clientes.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!--SOBRE NÓS-->
-        <section id="sobre-nos">
-            <div class="about-container">
-            <div class="about-us-container">
-                <p class="about-us-title" >Sobre Nós</p>
-                <p class="about-us-text">Somos a NeWo, uma empresa que cria softwares para escolas técnicas de todo o Brasil. Nosso objetivo é facilitar o dia a dia de quem trabalha com educação, oferecendo sistemas práticos, modernos e confiáveis.</p>
-            </div>
-            <div class="story-container">
-                <div class="story-text-container">
-                    <p class="story-title">Como surgiu o NeWo?</p>
-                <p class="story-text">
-                    A NeWo nasceu da união de seis alunos que, durante o TCC, decidiram criar um sistema para facilitar a rotina da escola. O que começou como um projeto acadêmico evoluiu para uma empresa focada em desenvolver soluções para escolas de todo o Brasil.
-                </p>
-                
-                </div >
-                <img class="story-icon" src="img/computer.png">
-            </div>
-
-            <div class="benefits-container">
-                <img class="benefits-icon" src="img/statistics.png">
-
-                <div class="benefits-text-container">
-                    <p class="benefits-title">Facilidade na Rotina Escolar</p>
-                    <p class="benefits-subtiltle">Facilitamos a manutenção escolar no seu dia a dia</p>
-                    <p class="benefits-text">
-                        Nossa empresa, desenvolveu um sistema que atrae usuários ao tornar a rotina de manutenção escolar mais simples, organizada e rápida, facilitando cada tarefa do dia a dia. Venha conhecer o SIME!
+            <!-- SOBRE NÓS -->
+            <section id="sobre-nos">
+                <div class="about-us-container">
+                    <p class="section-title">Sobre Nós</p>
+                    <p class="section-text-center">
+                        Somos a NeWo, uma empresa que cria softwares para escolas técnicas de todo o Brasil. Nosso objetivo é facilitar o dia a dia de quem trabalha com educação, oferecendo sistemas práticos, modernos e confiáveis.
                     </p>
-                    <p class="read-more">Ler mais -></p>
-                </div >
+                </div>
 
-            </div>
-        </section>
-        
+                <!-- HISTÓRIA (TEXTO + IMAGEM) -->
+                <div class="split-container">
+                    <div class="split-text">
+                        <p class="split-title">Como surgiu a NeWo?</p>
+                        <img class="split-image" src="img/computer.png" alt="Computador NeWo">
+                        <div class="split-description">
+                            A NeWo nasceu da união de seis alunos que,<br> durante o TCC, decidiram criar um sistema<br> para facilitar a rotina da escola. O que começou<br> como um projeto acadêmico evoluiu para uma<br> empresa focada em desenvolver soluções para<br> escolas de todo o Brasil.
+                        </div>
+                        <div class="split-description-mobile">
+                            A NeWo nasceu da união de seis alunos que, durante o TCC, decidiram criar um sistema para facilitar a rotina da escola. O que começou como um projeto acadêmico evoluiu para uma empresa focada em desenvolver soluções para escolas de todo o Brasil.
+                        </div>
+                    </div>
+                </div>
 
+                <!-- BENEFÍCIOS (IMAGEM + TEXTO) -->
+                <div class="split-container reverse-mobile">
+                    <div class="split-text">
+                        <img class="split-image" src="img/statistics.png" alt="Estatísticas" id="Estatísticas">
+                        <p class="split-title">Facilidade na Rotina</p>
+                        <p class="split-subtitle">Facilitamos a manutenção escolar no seu<br> dia a dia</p>
+                        <div class="split-description">
+                            Nossa empresa desenvolveu um sistema que<br> atrai usuários ao tornar a rotina de<br> manutenção escolar mais simples, organizada<br> e rápida, facilitando cada tarefa do dia a dia.<br> Venha conhecer o SIME!
+                        </div>
+                        <div class="split-description-mobile">
+                            Nossa empresa desenvolveu um sistema que atrai usuários ao tornar a rotina de manutenção escolar mais simples, organizada e rápida, facilitando cada tarefa do dia a dia. Venha conhecer o SIME!
+                        </div>
+                        <p class="read-more"><a href="sime.html">Ler mais -></a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLABORADORES -->
             <div class="collaborators-container">
-                <p class="collaborators-title">Nossos colaboradores</p>
-
-
-                <img class="collaborators-icon" src="img/collaborators.png">
+                <div class="collaborators-title">Nossos colaboradores</div>
+                <img src="img/collaborators.png" alt="Colaboradores">
             </div>
-        </div>
 
-        <!--COMENTÁRIO-->
-
-        <div class="comments-container">
-            <p class="comments-title"> Gostou? Deixe seu comentário.</p>
-            <p class="comments-text">
-                Desde 2025, a NeWo tem se destacado como 
-                uma empresa inovadora, com uma visão de mercado
-                clara e voltada para o futuro da tecnologia
-                educacional. Nossa equipe é  comprometida,
-                consistente e motivada a desenvolver soluções
-                que realmente fazem a diferença no dia a dia das
-                escolas. Acreditamos na inovação como motor para
-                transformar processos e facilitar rotinas, sempre
-                com foco na qualidade e confiabilidade de nossos
-                sistemas.
-            </p>
-
-            <!--
-            <div class="comment-input-container">
-                <img class="comment-icon" src="img/comment.png">
-                <input class="comment-input" placeholder="Comente aqui..." type="text">
-            </div> -->
-
-            <p class="comment-click">Aperte aqui para ver os comentários.</p>
-            <div class="comment-message-container">
-                <p class="comment-message" >Sua opinião importa</p>
-                <label></label>
-                <img class="newo-icon" src="img/logo.png">
+            <!-- COMENTÁRIOS -->
+            <div class="comments-section">
+                <p class="section-title" id="titulo">Gostou? Deixe seu comentário.</p>
+                <p class="section-text-center">
+                    Desde 2025, a NeWo tem se destacado como uma empresa inovadora, com uma<br> visão de mercado clara e voltada para o futuro da tecnologia educacional. Nossa<br> equipe é comprometida, consistente e motivada a desenvolver soluções que<br> realmente fazem a diferença no dia a dia das escolas. Acreditamos na inovação<br> como motor para transformar processos e facilitar rotinas, sempre com foco na<br> qualidade e confiabilidade de nossos sistemas.
+                </p>
+                <p class="section-text-center-mobile">
+                    Desde 2025, a NeWo tem se destacado como uma empresa inovadora, com uma visão de mercado clara e voltada para o futuro da tecnologia educacional. Nossa equipe é comprometida, consistente e motivada a desenvolver soluções que realmente fazem a diferença no dia a dia das escolas. Acreditamos na inovação como motor para transformar processos e facilitar rotinas, sempre com foco na qualidade e confiabilidade de nossos sistemas.
+                </p>
+                <div class="comment-cta">
+                    <p class="comment-click">Aperte aqui para ver os comentários.</p>
+                    <div class="comment-message-wrapper">
+                        <p>Sua opinião importa</p>
+                        <div class="separator-line"></div>
+                        <div class="logo-imagem">
+                            <img src="img/logo.png" width="80px" alt="Logo Newo">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!--SIME-->
-        <div class="about-sime-container">
-
-            <p class="about-sime-title">Sobre o SIME</p>
-            <div class="c3"></div>
-            <div class="about-sime-container-text">
-                <p class="about-sime-text">SIME é um sistema digital que organiza a manutenção da sua escola de forma simples e eficiente.</p>
-                <p class="about-sime-text">O SIME (Sistema Integrado de Manutenção Escolar) foi projetado para dar apoio a rede de Etecs pelo Brasil, para ajudá-las na preservação de seus prédios.</p>
-                <p class="read-more">Ler mais -></p>
+            <!-- SOBRE O SIME -->
+            <div class="about-sime-container">
+                <div class="sime-layout">
+                    
+                    <div class="sime-title-wrapper">
+                        <p class="section-title">Sobre o SIME</p>
+                    </div>
+                    
+                    <div class="sime-text-content">
+                        <p class="section-text-left">
+                            SIME é um sistema digital que organiza a manutenção da<br> sua escola de forma simples e eficiente.<br>
+                        </p>
+                        <p class="section-text-left-mobile">
+                            SIME é um sistema digital que organiza a manutenção da sua escola de forma simples e eficiente.
+                        </p>
+                        <p class="section-text-left">
+                            O SIME (Sistema Integrado de Manutenção Escolar) foi<br> projetado para dar apoio a rede de Etecs pelo Brasil, para<br> ajudá-las na preservação de seus prédios.
+                        </p>
+                        <p class="section-text-left-mobile">
+                            O SIME (Sistema Integrado de Manutenção Escolar) foi projetado para dar apoio a rede de Etecs pelo Brasil, para ajudá-las na preservação de seus prédios.
+                        </p>
+                        <p class="read-more"><a href="sime.html" id="ler-mais">Ler mais -></a></p>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-        <!--FALE CONOSCO-->
 
-        <div class="contact-us-container">
+            <!-- FALE CONOSCO -->
+            <div class="contact-cta-container" id="section">
+                <p class="section-title">Fale conosco</p>
+                <p class="section-text-center" id="fale-conosco">
+                    Fale com a gente! Como um projeto criado por estudantes,<br> estamos sempre disponíveis para conversar, apresentar o<br> sistema e ouvir sugestões para melhorar ainda mais a <br>experiência das escolas.
+                </p>
+                <p class="section-text-center-mobile" id="fale-conosco-mobile">
+                    Fale com a gente! Como um projeto criado por estudantes, estamos sempre disponíveis para conversar, apresentar o sistema e ouvir sugestões para melhorar ainda mais a experiência das escolas.
+                </p>
+                <button class="linear-gradient-btn" id="button-fale-conosco"><a href="contato.html">CONHECER</a></button>
+            </div>
 
-
-
-            <p class="contact-us-title">Fale conosco</p>
-            <p class="contact-us-text">
-                Fale com a gente! Como um projeto criado por estudantes, estamos sempre disponíveis para conversar, apresentar o sistema e ouvir sugestões para melhorar ainda mais a experiência das escolas.
-            </p>
-            <button class="linear-gradient-btn">CONHECER</button>
-        </div>
         </main>
-    </div>
+        
+            <div class="lights-container">
+                <div class="c1"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+                <div class="c4"></div>
+                <div class="c5"></div>
+                <div class="c6"></div>
+            </div>
+
+
+    </div> <!-- Fim Main Container -->
 
     <hr>
-        <footer>
-            <div class="info">
-                <ul class="footer-list">
-                    <li class="footer-title">NEWO AGRADECE</li>
-                    <li class="footer-subtitle">SIME</li>
-                    <li class="footer-subtitle">Preços</li>
-                </ul>
-                <img src="img/logo.png" class="logo-footer" width="180px">
+    <footer>
+        <div class="info">
+            <ul class="footer-list">
+                <li class="footer-title">NEWO AGRADECE</li>
+                <li class="footer-subtitle">SIME</li>
+                <li class="footer-subtitle">Preços</li>
+            </ul>
+            <img src="img/logo.png" width="180px">
+        </div>
+        <div class="contact-icons">
+            <img src="img/IG.png">
+            <img src="img/gmail.png">
+            <img src="img/github.png">
+        </div>
+    </footer>
 
-            </div>
-            <div class="contact-icons">
-                <img src="img/IG.png">
-                <img src="img/gmail.png">
-                <a href="https://github.com/etec-SIME"><img src="img/github.png"></a>
-            </div>
-        </footer> 
-
-        <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
+</html>

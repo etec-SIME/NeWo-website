@@ -913,6 +913,7 @@ hr {
     margin-top: clamp(0.5vw, 0.8vw, 12px);
     margin-right: clamp(1.5vw, 2.17vw, 32px);
 }
+
 @media screen and (max-width: 1440px) and (max-height: 900px) {
     
     .menu-nav {
@@ -2417,7 +2418,7 @@ hr {
         width: 34vw;
         height: 9vh;
         left: 56vw;
-        top: 860vw;
+        top: 80vw;
         background: #7a4574;
         filter: blur(5vw);
         border-radius: 80%;
